@@ -1,0 +1,240 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of EvenementController
+ *
+ * @author manu
+ */
+class EvenementsController extends AdministrationAppController {
+
+    public $uses = array('Agenda.Evenement', 'Administration.BufferedEvenement');
+    public $plugin = 'Administration';
+    public $helpers = array(
+        'Html',
+        'Form',
+        'Session',
+            //'Time',
+            //'Text'
+    );
+
+    public function beforeFilter() {
+
+        parent::beforeFilter();
+        // $this->Auth->deny();
+    }
+
+    public function isAuthorized($user) {
+
+        //    if(in_array($this->action,array('edit','delete'))){
+        $modelId = $this->request->params['pass'][0];
+
+        if ($user && $this->BufferedEvenement->isOwnedBy($modelId, $user['id'])) {
+            return true;
+        }
+        //}
+        return parent::isAuthorized($user);
+    }
+
+    public function edit($id = null) {
+        if (!$id) {
+            throw new NotFoundException(__('Pas d\'événement correspondante'));
+        }
+
+               $evenement = $this->Evenement->find('first', array('contain'=>array(
+            'Ficheactivite',
+            'Typepublic',
+            'Tag',
+            'Image',
+            'Document',
+            'ExternalMedia',
+            'Type',
+            'Parent',
+            'Session',//evenement standard
+            'Children'=>array(
+                'Session' // evenement maître
+            )
+            ),'conditions' => array('Evenement.id' => $id)));
+        
+        
+          // $evenement = $this->Evenement->find('first', array('conditions' => array('Evenement.id' => $id)));
+        debug($evenement);
+        if (!$evenement) {
+            throw new NotFoundException(__('Pas d\'événement correspondant'));
+        }
+        //check si une fiche événement tampon existe deja !
+        $BufferedEvenement = $this->BufferedEvenement->find('first', array('conditions' => array('BufferedEvenement.evenement_id' => $id)));
+       
+        if (!empty($BufferedEvenement)) {
+            //$this->request->data['BufferedEvenement']['id'] = $BufferedEvenement['BufferedEvenement']['id'];
+            $this->Session->setFlash(
+                    "Une version modifiée de cette fiche existe déjà et est en attente de validation<br/>Toutes les modifications précédemment apportées seront écrasées<br/> ", "default", array('class' => 'alert alert-info')
+            );
+            // $this->redirect('/BufferedEvenements/edit',$this->BufferedEvenement->id);
+            return $this->redirect(array('controller' => 'BufferedEvenements', 'action' => 'edit', $BufferedEvenement['BufferedEvenement']['id'], 'ref' => $evenement['Evenement']['id']));
+        } else {
+           //pas de fiche evenement  tampon, on en crée une 
+           $bufferedEvenement['BufferedEvenement']=$evenement['Evenement'];
+            /*******ficheactivite liée ***********/
+            if (empty($evenement['Ficheactivite'])) {
+                throw new NotFoundException(__('Pas d\'activité liée'));
+            }
+            else{
+                    //existe il une fiche activite tampon associée ?
+                    $this->loadModel('Administration.BufferedFicheactivite');
+                    $BufferedFicheactivite = $this->BufferedFicheactivite->find('first', array('conditions' => array('ficheactivite_id' => $evenement['Ficheactivite']['id'])));
+                if (!empty($BufferedFicheactivite)){
+                   $bufferedEvenement['BufferedEvenement']['buffered_ficheactivite_id']=$BufferedFicheactivite['BufferedFicheactivite']['id'];
+                }
+                else{
+                    //on en crée une
+                    $this->BufferedFicheactivite->create();
+                    $this->request->data['BufferedFicheactivite'] = $evenement['Ficheactivite'];
+                    $this->request->data['BufferedFicheactivite']['ficheactivite_id'] = $evenement['Ficheactivite']['id'];
+                    unset($this->request->data['BufferedFicheactivite']['id']);
+                        if (!$this->BufferedFicheactivite->saveAll($this->request->data['BufferedFicheactivite'])) {
+                            $this->Session->setFlash(__('Création de la fiche impossible.'), 'default', array('class' => 'alert alert-danger'));
+                        }
+                        else{
+                            //on recupere l'id
+                            unset($bufferedEvenement['BufferedEvenement']['ficheactivite_id']);
+                            $bufferedEvenement['BufferedEvenement']['buffered_ficheactivite_id']=$this->BufferedFicheactivite->id;
+                        } 
+                }
+                
+            }
+             /*******evenement parent  ***********/
+           // debug(!empty($evenement['Evenement']['parent_id']));
+            if (!empty($evenement['Evenement']['parent_id']) && !empty($evenement['Parent'])) {
+                 $this->BufferedFicheactivite->create();
+                 $this->request->data['BufferedEvenementParent']= $evenement['Parent'];
+                 // les fiches evenement et parent sont loies à la même fiche activite
+                 $this->request->data['BufferedEvenementParent']['buffered_ficheactivite_id']=$bufferedEvenement['BufferedEvenement']['buffered_ficheactivite_id'];
+               // lien avec l'evenement
+                 $this->request->data['BufferedEvenementParent']['evenement_id']=$evenement['Parent']['id'];
+
+                //on force...
+                 $this->request->data['BufferedEvenementParent']['master']=1;
+                 //null
+                 unset($this->request->data['BufferedEvenementParent']['id']);
+                 unset($this->request->data['BufferedEvenementParent']['parent_id']);
+                 debug($this->request->data['BufferedEvenementParent']);
+                 if( !$this->BufferedEvenement->save($this->request->data['BufferedEvenementParent'])){
+                     $this->Session->setFlash(__('Création de l\'evenement parent impossible.'), 'default', array('class' => 'alert alert-danger'));
+                 }
+                 else{
+                      //on recupere l'id
+                            debug($this->BufferedEvenement->id);
+                            unset($bufferedEvenement['BufferedEvenement']['parent_id']);
+                            $bufferedEvenement['BufferedEvenement']['buffered_parent_id']=$this->BufferedEvenement->id;
+                            unset($this->BufferedEvenement->id);
+                 }
+            
+            }
+            
+            /*******evenement + session***********/
+            $this->BufferedFicheactivite->create();
+            $bufferedEvenement['BufferedEvenement']['evenement_id']=$bufferedEvenement['Evenement']['id'];
+            debug($bufferedEvenement['BufferedEvenement']);
+            unset($bufferedEvenement['BufferedEvenement']['id']);
+            
+            $bufferedEvenement['Session']=$evenement["Session"];
+            foreach($bufferedEvenement["Session"] as $key=>$value){
+                unset($bufferedEvenement["Session"][$key]['id']);
+                unset($bufferedEvenement["Session"][$key]['evenement_id']);
+            }
+            debug($bufferedEvenement);
+                if( !$this->BufferedEvenement->saveAssociated($bufferedEvenement, array('deep' => true))){
+                     $this->Session->setFlash(__('Création de l\'evenement tampon impossible.'), 'default', array('class' => 'alert alert-danger'));
+                 }
+                 else{
+                      //on recupere l'id
+                            debug($this->BufferedEvenement->id);
+                            
+                            $bufferedEvenement['BufferedSession']['buffered_evenement_id']=$this->BufferedEvenement->id;
+                 }
+            /*******evenement enfant ***********/
+                 
+                 
+            /*
+             if (!empty($this->request->data['Parent'])){
+                 $this->request->data['Parent']['evenement_id']=$this->request->data['Parent']['id'];
+                unset($this->request->data['Parent']['id']);
+                 $this->BufferedEvenement->create();
+                 $this->BufferedEvenement->save($this->request->data['Parent']);
+                 debug($this->BufferedEvenement->id);
+             }*/
+             /*
+            $this->BufferedEvenement->create();
+            
+            unset($this->request->data['Evenement']);
+            
+            $this->request->data['BufferedEvenement'] = $evenement['Evenement'];
+            $this->request->data['BufferedEvenement']['evenement_id'] = $id;
+            unset($this->request->data['BufferedEvenement']['id']);
+            debug($this->request->data);
+            $this->BufferedEvenement->saveAll($this->request->data);
+            */
+          /*
+            if (!empty($this->request->data['Session'])){
+                foreach($this->request->data['Session'] as $key=>$value){
+                    $this->request->data['Session'][$key]['buffered_evenement_id']=
+                }
+                debug($this->request->data['Session']);
+               // $this->BufferedEvenement->Session->saveAll($this->request->data['Session']);
+            }
+           */
+            /*
+            if (!$this->BufferedEvenement->saveAssociated($this->request->data)) {
+                $this->Session->setFlash(__('Création de la fiche impossible.'), 'default', array('class' => 'alert alert-danger'));
+            } else {
+                return $this->redirect(array('controller' => 'BufferedEvenements', 'action' => 'edit', $this->BufferedEvenement->id, 'ref' => $evenement['Evenement']['id'],));
+            }*/
+        }
+
+        // $this->redirect(array('controller'=>'BufferedEvenements', 'action'=>'edit','ref'=>$id));
+        //$this->render('BufferedEvenements/edit');
+    }
+
+    public function delete($id = null) {
+
+        $this->request->onlyAllow('ajax'); // No direct access via browser URL
+        if ($this->request->is(array('post', 'delete'))) {
+
+            if (!$id) {
+                $response['error'] = 'Pas de fiche associé!';
+            } else {
+                try {
+                    $evenement = $this->Evenement->find('first', array('conditions' => array('id' => $id)));
+                } catch (Exception $exc) {
+                    $response['error'] = 'Pas de fiche associé!';
+                }
+            }
+            $BufferedEvenement = $this->BufferedEvenement->find('first', array('conditions' => array('ficheactivite_id' => $id)));
+            //  debug($BufferedEvenement);
+            if (!empty($BufferedEvenement)) {
+                $this->request->data['BufferedEvenement']['id'] = $BufferedEvenement['BufferedEvenement']['id'];
+                return $this->redirect(array('controller' => 'BufferedEvenements', 'action' => 'delete', $BufferedEvenement['BufferedEvenement']['id'], 'ref' => $evenement['Evenement']['id']));
+            } else {
+                $this->BufferedEvenement->create();
+                $this->request->data['BufferedEvenement'] = $evenement['Evenement'];
+                $this->request->data['BufferedEvenement']['ficheactivite_id'] = $id;
+                $this->request->data['BufferedEvenement']['deleted'] = 1;
+                unset($this->request->data['BufferedEvenement']['id']);
+                try {
+                    $this->BufferedEvenement->saveAll($this->request->data['BufferedEvenement']);
+                } catch (Exception $exc) {
+                    $response['error'] = $exc->getMessage();
+                }
+            }
+            $this->set('response', $response);
+            $this->set('_serialize', 'response');
+        }
+    }
+
+}

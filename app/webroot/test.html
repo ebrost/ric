@@ -1,0 +1,356 @@
+<pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c6c58b-trace').style.display = (document.getElementById('cakeErr53ac3e9c6c58b-trace').style.display == 'none' ? '' : 'none');"><b>Notice</b> (8)</a>: Array to string conversion [<b>CORE\Cake\Controller\Component\RequestHandlerComponent.php</b>, line <b>170</b>]<div id="cakeErr53ac3e9c6c58b-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c6c58b-code').style.display = (document.getElementById('cakeErr53ac3e9c6c58b-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c6c58b-context').style.display = (document.getElementById('cakeErr53ac3e9c6c58b-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr53ac3e9c6c58b-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$extensions&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Router</span><span style="color: #007700">::</span><span style="color: #0000BB">extensions</span><span style="color: #007700">();</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$accepts&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">)&nbsp;{</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ext&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">array_intersect</span><span style="color: #007700">(</span><span style="color: #0000BB">$extensions</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">);</span></span></code></span></pre><pre id="cakeErr53ac3e9c6c58b-context" class="cake-context" style="display: none;">$accept = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;application/json&#039;,
+		(int) 1 =&gt; &#039;text/javascript&#039;
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;*/*&#039;
+	)
+)
+$accepts = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; null
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;html&#039;
+	)
+)
+$preferedTypes = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; null
+)
+$extensions = array(
+	(int) 0 =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; &#039;pdf&#039;
+	),
+	(int) 1 =&gt; &#039;json&#039;,
+	(int) 2 =&gt; &#039;pdf&#039;
+)
+$types = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; null
+)</pre><pre class="stack-trace">array_intersect - [internal], line ??
+RequestHandlerComponent::_setExtension() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 170
+RequestHandlerComponent::initialize() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 134
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 674
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110</pre></div></pre><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c6d2a8-trace').style.display = (document.getElementById('cakeErr53ac3e9c6d2a8-trace').style.display == 'none' ? '' : 'none');"><b>Notice</b> (8)</a>: Array to string conversion [<b>CORE\Cake\Controller\Component\RequestHandlerComponent.php</b>, line <b>170</b>]<div id="cakeErr53ac3e9c6d2a8-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c6d2a8-code').style.display = (document.getElementById('cakeErr53ac3e9c6d2a8-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c6d2a8-context').style.display = (document.getElementById('cakeErr53ac3e9c6d2a8-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr53ac3e9c6d2a8-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$extensions&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Router</span><span style="color: #007700">::</span><span style="color: #0000BB">extensions</span><span style="color: #007700">();</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$accepts&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">)&nbsp;{</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ext&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">array_intersect</span><span style="color: #007700">(</span><span style="color: #0000BB">$extensions</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">);</span></span></code></span></pre><pre id="cakeErr53ac3e9c6d2a8-context" class="cake-context" style="display: none;">$accept = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;application/json&#039;,
+		(int) 1 =&gt; &#039;text/javascript&#039;
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;*/*&#039;
+	)
+)
+$accepts = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; null
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;html&#039;
+	)
+)
+$preferedTypes = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; null
+)
+$extensions = array(
+	(int) 0 =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; &#039;pdf&#039;
+	),
+	(int) 1 =&gt; &#039;json&#039;,
+	(int) 2 =&gt; &#039;pdf&#039;
+)
+$types = array(
+	(int) 0 =&gt; &#039;html&#039;
+)
+$ext = array()</pre><pre class="stack-trace">array_intersect - [internal], line ??
+RequestHandlerComponent::_setExtension() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 170
+RequestHandlerComponent::initialize() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 134
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 674
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110</pre></div></pre><div class="cake-debug-output">
+<span><strong>\app\Plugin\Agenda\Model\Evenement.php</strong> (line <strong>166</strong>)</span>
+<pre class="cake-debug">
+(int) 77
+</pre>
+</div><div class="cake-debug-output">
+<span><strong>\app\Plugin\Agenda\Model\Evenement.php</strong> (line <strong>172</strong>)</span>
+<pre class="cake-debug">
+(int) 78
+</pre>
+</div><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c8ff0b-trace').style.display = (document.getElementById('cakeErr53ac3e9c8ff0b-trace').style.display == 'none' ? '' : 'none');"><b>Notice</b> (8)</a>: Array to string conversion [<b>CORE\Cake\Controller\Component\RequestHandlerComponent.php</b>, line <b>170</b>]<div id="cakeErr53ac3e9c8ff0b-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c8ff0b-code').style.display = (document.getElementById('cakeErr53ac3e9c8ff0b-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c8ff0b-context').style.display = (document.getElementById('cakeErr53ac3e9c8ff0b-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr53ac3e9c8ff0b-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$extensions&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Router</span><span style="color: #007700">::</span><span style="color: #0000BB">extensions</span><span style="color: #007700">();</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$accepts&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">)&nbsp;{</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ext&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">array_intersect</span><span style="color: #007700">(</span><span style="color: #0000BB">$extensions</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">);</span></span></code></span></pre><pre id="cakeErr53ac3e9c8ff0b-context" class="cake-context" style="display: none;">$accept = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;application/json&#039;,
+		(int) 1 =&gt; &#039;text/javascript&#039;
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;*/*&#039;
+	)
+)
+$accepts = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; null
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;html&#039;
+	)
+)
+$preferedTypes = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; null
+)
+$extensions = array(
+	(int) 0 =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; &#039;pdf&#039;
+	),
+	(int) 1 =&gt; &#039;json&#039;,
+	(int) 2 =&gt; &#039;pdf&#039;
+)
+$types = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; null
+)</pre><pre class="stack-trace">array_intersect - [internal], line ??
+RequestHandlerComponent::_setExtension() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 170
+RequestHandlerComponent::initialize() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 134
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 674
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 157
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 95
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 121
+[main] - [internal], line ??</pre></div></pre><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c90bc1-trace').style.display = (document.getElementById('cakeErr53ac3e9c90bc1-trace').style.display == 'none' ? '' : 'none');"><b>Notice</b> (8)</a>: Array to string conversion [<b>CORE\Cake\Controller\Component\RequestHandlerComponent.php</b>, line <b>170</b>]<div id="cakeErr53ac3e9c90bc1-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c90bc1-code').style.display = (document.getElementById('cakeErr53ac3e9c90bc1-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr53ac3e9c90bc1-context').style.display = (document.getElementById('cakeErr53ac3e9c90bc1-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr53ac3e9c90bc1-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$extensions&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Router</span><span style="color: #007700">::</span><span style="color: #0000BB">extensions</span><span style="color: #007700">();</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$accepts&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">)&nbsp;{</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ext&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">array_intersect</span><span style="color: #007700">(</span><span style="color: #0000BB">$extensions</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">);</span></span></code></span></pre><pre id="cakeErr53ac3e9c90bc1-context" class="cake-context" style="display: none;">$accept = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;application/json&#039;,
+		(int) 1 =&gt; &#039;text/javascript&#039;
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;*/*&#039;
+	)
+)
+$accepts = array(
+	&#039;1.0&#039; =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; null
+	),
+	&#039;0.01&#039; =&gt; array(
+		(int) 0 =&gt; &#039;html&#039;
+	)
+)
+$preferedTypes = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; null
+)
+$extensions = array(
+	(int) 0 =&gt; array(
+		(int) 0 =&gt; &#039;json&#039;,
+		(int) 1 =&gt; &#039;pdf&#039;
+	),
+	(int) 1 =&gt; &#039;json&#039;,
+	(int) 2 =&gt; &#039;pdf&#039;
+)
+$types = array(
+	(int) 0 =&gt; &#039;html&#039;
+)
+$ext = array()</pre><pre class="stack-trace">array_intersect - [internal], line ??
+RequestHandlerComponent::_setExtension() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 170
+RequestHandlerComponent::initialize() - CORE\Cake\Controller\Component\RequestHandlerComponent.php, line 134
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 674
+ExceptionRenderer::_getController() - CORE\Cake\Error\ExceptionRenderer.php, line 157
+ExceptionRenderer::__construct() - CORE\Cake\Error\ExceptionRenderer.php, line 95
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 121
+[main] - [internal], line ??</pre></div></pre><h2>Missing View</h2>
+<p class="error">
+	<strong>Error: </strong>
+	The view for <em>EvenementsController::</em><em>getCount()</em> was not found.</p>
+<p class="error">
+	<strong>Error: </strong>
+	Confirm you have created the file: C:\wamp\www\ric3.0.2-4\app\View\Plugin\Agenda\Evenements\get_count.ctp</p>
+<p class="notice">
+	<strong>Notice: </strong>
+	If you want to customize this error message, create app\View\Errors\missing_view.ctp</p>
+
+<h3>Stack Trace</h3>
+<ul class="cake-stack-trace">
+	<li><a href="#" onclick="traceToggle(event, 'file-excerpt-0')">CORE\Cake\View\View.php line 459</a> &rarr; <a href="#" onclick="traceToggle(event, 'trace-args-0')">View->_getViewFileName(null)</a> <div id="file-excerpt-0" class="cake-code-dump" style="display:none;"><pre><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Blocks</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">set</span><span style="color: #007700">(</span><span style="color: #DD0000">'content'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">);</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB"></span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$view&nbsp;</span><span style="color: #007700">!==&nbsp;</span><span style="color: #0000BB">false&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;</span><span style="color: #0000BB">$viewFileName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_getViewFileName</span><span style="color: #007700">(</span><span style="color: #0000BB">$view</span><span style="color: #007700">))&nbsp;{</span></span></code></span>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_currentType&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_VIEW</span><span style="color: #007700">;</span></span></code></pre></div> <div id="trace-args-0" class="cake-code-dump" style="display: none;"><pre>null</pre></div></li>
+	<li><a href="#" onclick="traceToggle(event, 'file-excerpt-1')">CORE\Cake\Controller\Controller.php line 952</a> &rarr; <a href="#" onclick="traceToggle(event, 'trace-args-1')">View->render(null, null)</a> <div id="file-excerpt-1" class="cake-code-dump" style="display:none;"><pre><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB"></span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">autoRender&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">response</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">body</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">View</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #0000BB">$view</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$layout</span><span style="color: #007700">));</span></span></code></span>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">response</span><span style="color: #007700">;</span></span></code></pre></div> <div id="trace-args-1" class="cake-code-dump" style="display: none;"><pre>null
+null</pre></div></li>
+	<li><a href="#" onclick="traceToggle(event, 'file-excerpt-2')">CORE\Cake\Routing\Dispatcher.php line 194</a> &rarr; <a href="#" onclick="traceToggle(event, 'trace-args-2')">Controller->render()</a> <div id="file-excerpt-2" class="cake-code-dump" style="display:none;"><pre><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB"></span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$render&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;</span><span style="color: #0000BB">$controller</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">autoRender</span><span style="color: #007700">)&nbsp;{</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$controller</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">();</span></span></code></span>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}&nbsp;elseif&nbsp;(!(</span><span style="color: #0000BB">$result&nbsp;</span><span style="color: #007700">instanceof&nbsp;</span><span style="color: #0000BB">CakeResponse</span><span style="color: #007700">)&nbsp;&amp;&amp;</span></span></code></pre></div> <div id="trace-args-2" class="cake-code-dump" style="display: none;"><pre></pre></div></li>
+	<li><a href="#" onclick="traceToggle(event, 'file-excerpt-3')">CORE\Cake\Routing\Dispatcher.php line 162</a> &rarr; <a href="#" onclick="traceToggle(event, 'trace-args-3')">Dispatcher->_invoke(EvenementsController, CakeRequest, CakeResponse)</a> <div id="file-excerpt-3" class="cake-code-dump" style="display:none;"><pre><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">));</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB"></span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_invoke</span><span style="color: #007700">(</span><span style="color: #0000BB">$controller</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$response</span><span style="color: #007700">);</span></span></code></span>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(isset(</span><span style="color: #0000BB">$request</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">params</span><span style="color: #007700">[</span><span style="color: #DD0000">'return'</span><span style="color: #007700">]))&nbsp;{</span></span></code></pre></div> <div id="trace-args-3" class="cake-code-dump" style="display: none;"><pre>object(EvenementsController) {
+	uses =&gt; array(
+		[maximum depth reached]
+	)
+	helpers =&gt; array(
+		[maximum depth reached]
+	)
+	cacheAction =&gt; array(
+		[maximum depth reached]
+	)
+	components =&gt; array(
+		[maximum depth reached]
+	)
+	name =&gt; &#039;Evenements&#039;
+	request =&gt; object(CakeRequest) {}
+	response =&gt; object(CakeResponse) {}
+	viewPath =&gt; &#039;Evenements&#039;
+	layoutPath =&gt; null
+	viewVars =&gt; array(
+		[maximum depth reached]
+	)
+	view =&gt; &#039;getCount&#039;
+	layout =&gt; &#039;ajax&#039;
+	autoRender =&gt; false
+	autoLayout =&gt; true
+	Components =&gt; object(ComponentCollection) {}
+	viewClass =&gt; &#039;View&#039;
+	View =&gt; object(View) {}
+	ext =&gt; &#039;.ctp&#039;
+	plugin =&gt; &#039;Agenda&#039;
+	passedArgs =&gt; array([maximum depth reached])
+	scaffold =&gt; false
+	methods =&gt; array(
+		[maximum depth reached]
+	)
+	modelClass =&gt; &#039;Evenement&#039;
+	modelKey =&gt; &#039;evenement&#039;
+	validationErrors =&gt; null
+	Toolbar =&gt; object(ToolbarComponent) {}
+	RequestHandler =&gt; object(RequestHandlerComponent) {}
+	Session =&gt; object(SessionComponent) {}
+	Auth =&gt; object(AuthComponent) {}
+	Evenement =&gt; object(Evenement) {}
+	[protected] appName =&gt; &#039;Agenda des manifestations&#039;
+	[protected] _responseClass =&gt; &#039;CakeResponse&#039;
+	[protected] _mergeParent =&gt; &#039;AppController&#039;
+	[protected] _eventManager =&gt; object(CakeEventManager) {}
+}
+object(CakeRequest) {
+	params =&gt; array(
+		[maximum depth reached]
+	)
+	data =&gt; array(
+		[maximum depth reached]
+	)
+	query =&gt; array([maximum depth reached])
+	url =&gt; &#039;agenda/evenements/getCount&#039;
+	base =&gt; &#039;/ric3.0.2-4&#039;
+	webroot =&gt; &#039;/ric3.0.2-4/&#039;
+	here =&gt; &#039;/ric3.0.2-4/agenda/evenements/getCount&#039;
+	[protected] _detectors =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _input =&gt; &#039;&#039;
+}
+object(CakeResponse) {
+	[protected] _statusCodes =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _mimeTypes =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _protocol =&gt; &#039;HTTP/1.1&#039;
+	[protected] _status =&gt; (int) 200
+	[protected] _contentType =&gt; &#039;text/html&#039;
+	[protected] _headers =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _body =&gt; null
+	[protected] _file =&gt; null
+	[protected] _fileRange =&gt; null
+	[protected] _charset =&gt; &#039;UTF-8&#039;
+	[protected] _cacheDirectives =&gt; array([maximum depth reached])
+	[protected] _cookies =&gt; array([maximum depth reached])
+}</pre></div></li>
+	<li><a href="#" onclick="traceToggle(event, 'file-excerpt-4')">APP\webroot\index.php line 110</a> &rarr; <a href="#" onclick="traceToggle(event, 'trace-args-4')">Dispatcher->dispatch(CakeRequest, CakeResponse)</a> <div id="file-excerpt-4" class="cake-code-dump" style="display:none;"><pre><code><span style="color: #000000"><span style="color: #0000BB">$Dispatcher</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dispatch</span><span style="color: #007700">(</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">new&nbsp;</span><span style="color: #0000BB">CakeRequest</span><span style="color: #007700">(),</span></span></code>
+<code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">new&nbsp;</span><span style="color: #0000BB">CakeResponse</span><span style="color: #007700">()</span></span></code>
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB"></span><span style="color: #007700">);</span></span></code></span>
+<code><span style="color: #000000"><span style="color: #0000BB"></span></span></code></pre></div> <div id="trace-args-4" class="cake-code-dump" style="display: none;"><pre>object(CakeRequest) {
+	params =&gt; array(
+		[maximum depth reached]
+	)
+	data =&gt; array(
+		[maximum depth reached]
+	)
+	query =&gt; array([maximum depth reached])
+	url =&gt; &#039;agenda/evenements/getCount&#039;
+	base =&gt; &#039;/ric3.0.2-4&#039;
+	webroot =&gt; &#039;/ric3.0.2-4/&#039;
+	here =&gt; &#039;/ric3.0.2-4/agenda/evenements/getCount&#039;
+	[protected] _detectors =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _input =&gt; &#039;&#039;
+}
+object(CakeResponse) {
+	[protected] _statusCodes =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _mimeTypes =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _protocol =&gt; &#039;HTTP/1.1&#039;
+	[protected] _status =&gt; (int) 200
+	[protected] _contentType =&gt; &#039;text/html&#039;
+	[protected] _headers =&gt; array(
+		[maximum depth reached]
+	)
+	[protected] _body =&gt; null
+	[protected] _file =&gt; null
+	[protected] _fileRange =&gt; null
+	[protected] _charset =&gt; &#039;UTF-8&#039;
+	[protected] _cacheDirectives =&gt; array([maximum depth reached])
+	[protected] _cookies =&gt; array([maximum depth reached])
+}</pre></div></li>
+</ul>
+<script type="text/javascript">
+function traceToggle(event, id) {
+	var el = document.getElementById(id);
+	el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+	event.preventDefault();
+	return false;
+}
+</script>

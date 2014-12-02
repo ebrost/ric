@@ -1,0 +1,657 @@
+<pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr530236cabc832-trace').style.display = (document.getElementById('cakeErr530236cabc832-trace').style.display == 'none' ? '' : 'none');"><b>Warning</b> (2)</a>: strcasecmp() expects parameter 1 to be string, array given [<b>CORE\Cake\Routing\Router.php</b>, line <b>595</b>]<div id="cakeErr530236cabc832-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr530236cabc832-code').style.display = (document.getElementById('cakeErr530236cabc832-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr530236cabc832-context').style.display = (document.getElementById('cakeErr530236cabc832-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr530236cabc832-context" class="cake-context" style="display: none;">$url = &#039;/annuaire/ficheactivites/getPdfList/0401,040101,040102,040103,040104,040105,0402,0404/13004.pdf&#039;
+$ext = null
+$match = &#039;pdf&#039;
+$name = array(
+	(int) 0 =&gt; &#039;json&#039;,
+	(int) 1 =&gt; &#039;pdf&#039;,
+	(int) 2 =&gt; &#039;csv&#039;
+)</pre><pre class="stack-trace">strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 595
+Router::parse() - CORE\Cake\Routing\Router.php, line 557
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 92</pre></div></pre><div class="cake-debug-output">
+<span><strong>\app\Plugin\Annuaire\Controller\FicheactivitesController.php</strong> (line <strong>339</strong>)</span>
+<pre class="cake-debug">
+array(
+	&#039;log&#039; =&gt; array(
+		(int) 0 =&gt; array(
+			&#039;query&#039; =&gt; &#039;SELECT Ficheactivite.id,Ficheactivite.nom_complet,Ficheactivite.adresse,Ficheactivite.code_postal,Ficheactivite.ville,Ficheactivite.url_site_web,Ficheactivite.email,Ficheactivite.activites,Ficheactivite.commentaires,Ficheactivite.latitude,Ficheactivite.longitude, Activite.root_id,Commune.code_territoire as Ficheactivite__commune,Ze.code_territoire as Ficheactivite__ze,Bdv.code_territoire as Ficheactivite__bdv,Epci.code_territoire as Ficheactivite__epci_2012,Arr_sspref.code_territoire as Ficheactivite__arr_sspref,Dep.code_territoire as Ficheactivite__dep FROM `baseric-atlas5`.`annuaire_ficheactivites` AS `Ficheactivite` JOIN `baseric-atlas5`.`annuaire_ficheactivites_communes` AS `FicheactiviteCommune` ON (`FicheactiviteCommune`.`ficheactivite_id`=`Ficheactivite`.`id`) JOIN `baseric-atlas5`.`territoires_insee_ric` AS `Inseeric` ON (`Inseeric`.`code_ric`=`FicheactiviteCommune`.`commune_id`) JOIN `baseric-atlas5`.`territoires` AS `Territoire` ON (`Territoire`.`code_commune`=`Inseeric`.`code_insee` AND `Territoire`.`type`=&quot;Commune&quot;) JOIN `baseric-atlas5`.`annuaire_ficheactivites_activites` AS `FicheactiviteActivite` ON (`FicheactiviteActivite`.`ficheactivite_id`=`Ficheactivite`.`id`) JOIN `baseric-atlas5`.`annuaire_activites` AS `Activite` ON (`Activite`.`id`=`FicheactiviteActivite`.`activite_id` AND `Activite`.`id` IN (&#039;0401&#039;, &#039;040101&#039;, &#039;040102&#039;, &#039;040103&#039;, &#039;040104&#039;, &#039;040105&#039;, &#039;0402&#039;, &#039;0404&#039;)) JOIN `baseric-atlas5`.`territoires_communes` AS `Territoirescommunes` ON (`Territoire`.`code_commune`=`Territoirescommunes`.`code_commune` AND `Territoirescommunes`.`code_territoire` = (&#039;13004&#039;)) LEFT JOIN `baseric-atlas5`.`territoires_communes` AS `Commune` ON (`Commune`.`code_commune`=`Territoire`.`code_commune` and `Commune`.`type`=&quot;commune&quot;) LEFT JOIN `baseric-atlas5`.`territoires_communes` AS `Ze` ON (`Ze`.`code_commune`=`Territoire`.`code_commune` and `Ze`.`type`=&quot;ze&quot;) LEFT JOIN `baseric-atlas5`.`territoires_communes` AS `Bdv` ON (`Bdv`.`code_commune`=`Territoire`.`code_commune` and `Bdv`.`type`=&quot;bdv&quot;) LEFT JOIN `baseric-atlas5`.`territoires_communes` AS `Arr_sspref` ON (`Arr_sspref`.`code_commune`=`Territoire`.`code_commune` and `Arr_sspref`.`type`=&quot;arr_sspref&quot;) LEFT JOIN `baseric-atlas5`.`territoires_communes` AS `Epci` ON (`Epci`.`code_commune`=`Territoire`.`code_commune` and `Epci`.`type`=&quot;epci&quot;) LEFT JOIN `baseric-atlas5`.`territoires_communes` AS `Dep` ON (`Dep`.`code_commune`=`Territoire`.`code_commune` and `Dep`.`type`=&quot;dep&quot;)  WHERE 1 = 1  GROUP BY `Ficheactivite`.`id`   LIMIT 300&#039;,
+			&#039;params&#039; =&gt; array(),
+			&#039;affected&#039; =&gt; (int) 13,
+			&#039;numRows&#039; =&gt; (int) 13,
+			&#039;took&#039; =&gt; (float) 13
+		)
+	),
+	&#039;count&#039; =&gt; (int) 1,
+	&#039;time&#039; =&gt; (float) 13
+)
+</pre>
+</div><div class="cake-debug-output">
+<span><strong>\app\Plugin\Annuaire\Controller\FicheactivitesController.php</strong> (line <strong>389</strong>)</span>
+<pre class="cake-debug">
+array(
+	(int) 0 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;1368&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;ARLES FAIT SES BULLES&#039;,
+			&#039;adresse&#039; =&gt; &#039;Association Bulles d&#039;Arles10 rue plan de la cour BP 10&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;arlesfaitsesbulles.unblog.fr&#039;,
+			&#039;email&#039; =&gt; &#039;&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle&#039;,
+			&#039;commentaires&#039; =&gt; &#039;Ce festival nÃ© en 2000, a toujours souhaitÃ© conserver un caractÃ¨re familial et convivial. Il entend rassembler des auteurs de nombreux pays. Les expositions sont le plus souvent parrainÃ©es par des auteurs reconnus du 9e art et associÃ© Ã  de grandes structures arlÃ©siennes, comme le MusÃ©e de l&#039;Arles antique.Rencontre avec des auteurs lors de confÃ©rences thÃ©matiques et de sÃ©ances de dÃ©dicaces. DÃ©couverte des oeuvres et du travail des artistes Ã  travers des expositions et des projections de films. Mais aussi des ateliers, des animations, des forums. &#039;,
+			&#039;latitude&#039; =&gt; &#039;43.676982&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627148&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 0
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 1 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;1386&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;ASSISES DE LA TRADUCTION LITTÃ‰RAIRE EN ARLES (ATLAS)&#039;,
+			&#039;adresse&#039; =&gt; &#039;CITL - Espace Van Gogh&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.atlas-citl.org&#039;,
+			&#039;email&#039; =&gt; &#039;citl@atlas-citl.org&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle&#039;,
+			&#039;commentaires&#039; =&gt; &#039;Les Assises de la traduction littÃ©raire en Arles (ATLAS) sont une manifestation unique en France, rÃ©unissant autour des grands auteurs de la littÃ©rature mondiale les traducteurs et lecteurs, dans une grande fÃªte de la circulation des idÃ©es. Les Assises sont organisÃ©es par le CITL (CollÃ¨ge international des traducteurs littÃ©raires).L&#039;objet des Assises est de rendre visible le travail de traduction et le traducteur. Ces rencontres offrent une tribune oÃ¹ les traducteurs peuvent s&#039;exprimer, Ã©changer leurs idÃ©es et expÃ©riences, et intÃ©resser le public Ã  un aspect mal connu de l&#039;activitÃ© littÃ©raire.Elles sont aussi, pour des professionnels, l&#039;occasion de sortir de l&#039;isolement liÃ© Ã  une pratique solitaire, oÃ¹ l&#039;Ã©valuation des compÃ©tences est difficile, les repÃ¨res flous et les lieux de formation rares.&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.675926&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.625851&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 1
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 2 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;1408&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;AUTREMENT DIT&#039;,
+			&#039;adresse&#039; =&gt; &#039;Maison de la vie associative3 boulevard des Lices&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;&#039;,
+			&#039;email&#039; =&gt; &#039;a.dit@free.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle ; Organisateur d&#039;animation littÃ©raire&#039;,
+			&#039;commentaires&#039; =&gt; &#039;* Description gÃ©nÃ©rale des activitÃ©s :- lectures Ã  voix haute dans tous les lieux qui s&#039;y prÃªtent (Ã©coles, librairies, musÃ©es, rue, hÃ´pital, maisons de retraite) afin de transmettre du sens, donner corps au texte, donner goÃ»t aux mots, Ã©veiller l&#039;imaginaire, ...- organisation de &quot;Un Livre, Une Rose&quot;- participation Ã  &quot;Lire en FÃªte&quot;- expositions de crÃ©ations d&#039;enfants- Ã©dition d&#039;un petit carnet &quot;FlorilÃ¨ge Amoureux&quot;- accompagnement scolaire dans le cadre du CEL, stage de lutte contre l&#039;illettrisme (atelier lecture Ã  voix haute et expression graphique, 2 heures par semaine)* Residence RÃ‰GIE : PrÃ©paration spectacle d&#039;aprÃ¨s Le Roman de Merlin et de MÃ©lusine du 24 au 29/11/10&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.675228&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.630279&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 2
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 3 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;1425&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;ASSOCIATION DU MÃ‰JAN&#039;,
+			&#039;adresse&#039; =&gt; &#039;Place Nina Berberova BP 90038&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.lemejan.com&#039;,
+			&#039;email&#039; =&gt; &#039;mejan@actes-sud.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle ; Organisateur d&#039;animation littÃ©raire&#039;,
+			&#039;commentaires&#039; =&gt; &#039;* Description gÃ©nÃ©rale des activitÃ©s : - organisation de signatures tous les mois en librairie- organisation de &quot;Lectures en Arles&quot; ; 1 rendez-vous par mois d&#039;octobre Ã  mai et un festival sur une semaine au mois de juin- prÃ©sentation de lectures et auteurs aux collÃ©giens et lycÃ©ens&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.676675&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627502&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 3
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 4 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;1745&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;MEDIATHÃˆQUE MUNICIPALE&#039;,
+			&#039;adresse&#039; =&gt; &#039;Espace Van Gogh - Place FÃ©lix Rey BP 240&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13637&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;mediatheque.ville-arles.fr&#039;,
+			&#039;email&#039; =&gt; &#039;mediatheque@ville-arles.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Cat 1&#039;,
+			&#039;commentaires&#039; =&gt; &#039;* Horaires d&#039;ouverture au public :Mardi, jeudi, vendredi de 13h Ã  18h30, mercredi de 10h Ã  18h30, samedi de 10h Ã  17h* Surface de la bibliothÃ¨que : 4355 m2* Nombre de documents imprimÃ©s : 252066* Annexes de la bibliothÃ¨que : Barriol, TrÃ©bon, Griffeuille et mÃ©diabus* Gestion informatisÃ©e des fonds (logiciel Opsys AloÃ¨s)* Supports disponibles : livres, livres audio, livres d&#039;artistes, CD, DVD, partitions, pÃ©riodiques* AccÃ¨s internet pour le public (12 postes)* AccÃ¨s au catalogue et au compte lecteur en ligne* Animations : JournÃ©es du Patrimoine, expositions (2 Ã  3 par an), rencontres d&#039;auteurs, Heure du Conte (1 fois par mois), projections* Bibliographies : AnnÃ©e de la Chine, AnnÃ©e de l&#039;AlgÃ©rie* Ateliers : Ã©criture, calligraphie (ponctuellement), NTIC (ponctuellement), lutte contre l&#039;illettrisme* Participation au Prix littÃ©raire des lycÃ©ens et apprentis de la rÃ©gion Provence-Alpes-CÃ´te d&#039;Azur&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.675908&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.625973&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 4
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 5 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;2301&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;COLLÃˆGE INTERNATIONAL DES TRADUCTEURS LITTÃ‰RAIRES&#039;,
+			&#039;adresse&#039; =&gt; &#039;Espace Van Gogh&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.atlas-citl.org&#039;,
+			&#039;email&#039; =&gt; &#039;citl@atlas-citl.org&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle ; Organisateur d&#039;animation littÃ©raire&#039;,
+			&#039;commentaires&#039; =&gt; &#039;La mission premiÃ¨re du CITL est d&#039;accueillir en rÃ©sidence des traducteurs professionnels venus du monde entier. Le CollÃ¨ge ne dispense aucun cours et n&#039;assure aucun suivi Ã©ditorial.Le CITL dÃ©veloppe aussi des relations &quot;Â binationalesÂ &quot; avec certains pays sous forme de sÃ©minaires de formation continue entre jeunes traducteurs et traducteurs chevronnÃ©s. Le CollÃ¨ge est Ã©galement l&#039;initiateur, dans la ville d&#039;Arles et dans sa rÃ©gion, de nombreuses animations culturelles, colloques ou tables rondes.&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.675926&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.625851&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 5
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 6 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;2957&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;LECTURES EN ARLES&#039;,
+			&#039;adresse&#039; =&gt; &#039;Association culturelle du MÃ©janPlace Nina Berberova BP 90038&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13633&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.lemejan.com&#039;,
+			&#039;email&#039; =&gt; &#039;mejan@actes-sud.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle&#039;,
+			&#039;commentaires&#039; =&gt; &#039;* Les &quot;Lectures en Arles&quot; existent depuis 1998 et ont Ã©tÃ© crÃ©Ã©es par Hubert Nyssen et Claude Santinelli.D&#039;octobre Ã  mai, un rendez-vous par mois est programmÃ© dans la chapelle du MÃ©jan, laissant carte blanche Ã  un comÃ©dien.* En juin, un festival d&#039;une semaine regroupe ces grands comÃ©diens autour d&#039;un thÃ¨me diffÃ©rent chaque annÃ©e. Les lectures sont â€œdÃ©localisÃ©esâ€ dans le cloÃ®tre de lâ€™Ã©glise Saint-Trophime Ã  Arles.&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.676675&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627502&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 6
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 7 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;5484&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;LIBRAIRIE ACTES SUD - ACTES SUD NATURE&#039;,
+			&#039;adresse&#039; =&gt; &#039;Place Nina Berberova BP 90038&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13633&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.librairieactessud.com&#039;,
+			&#039;email&#039; =&gt; &#039;contact@actes-sud.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Librairie IndÃ©pendante&#039;,
+			&#039;commentaires&#039; =&gt; &#039;Horaires d&#039;ouverture : le lundi de 14h Ã  19h30, du mardi au samedi de 9h30 Ã  19h30Services proposÃ©s :- Recherche bibliographique thÃ©matique- Commandes pour les collectivitÃ©s et les particuliers- Organisation dâ€™animations pour les enfants dans lâ€™espace jeunesse- PrÃ©sentation de tout le fond et des nouveautÃ©s du catalogue Actes Sud- Participation Ã  des manifestations et des salons thÃ©matiques- Carte de fidÃ©litÃ©Superficie de la librairie : 400 m2Surface de vente : 360 m2Surface rÃ©servÃ©e aux livres : 330 m2Nature du fonds : livres neufs, CD (classique, jazz, musiques du monde), DVDNombre de livres en stock : 60000Nombre de titres diffÃ©rents proposÃ©s : 41897Relation(s) avec les bibliothÃ¨ques : vente de livresParticipation Ã  des animations externes : colloque, salon, festivalMembre de l&#039;association Libraires du SudParticipation au Prix littÃ©raire des lycÃ©ens et apprentis de la rÃ©gion Provence-Alpes-CÃ´te d&#039;AzurLibrairie labellisÃ©e LR (Librairie de RÃ©fÃ©rence) en 2011 par le ministÃ¨re de la Culture et de la Communication&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.676675&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627502&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 7
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 8 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;5533&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;LIBRAIRIE DU PALAIS&#039;,
+			&#039;adresse&#039; =&gt; &#039;10 rue plan de la cour BP 110&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;&#039;,
+			&#039;email&#039; =&gt; &#039;librairiedupalaislib@canalbd.net&#039;,
+			&#039;activites&#039; =&gt; &#039;Librairie IndÃ©pendante&#039;,
+			&#039;commentaires&#039; =&gt; &#039;Horaires d&#039;ouverture : lundi de 14h Ã  19h, du mardi au samedi de 9h Ã  19hNombre de livres en stock : 15000Nombre de titres diffÃ©rents proposÃ©s : 12500Nature du fonds : livres neufs, para BDRelation(s) avec les bibliothÃ¨ques : conseil, partenariat, rÃ©ponse appel d&#039;offresParticipation Ã  des animations externes : salon, festivalMembre d&#039;un rÃ©seau : Association Libraires du Sud, Canal BD &#039;,
+			&#039;latitude&#039; =&gt; &#039;43.676982&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627148&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 8
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 9 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;5541&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;FORUM HARMONIA MUNDI&#039;,
+			&#039;adresse&#039; =&gt; &#039;3-5 rue du PrÃ©sident Wilson&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;&#039;,
+			&#039;email&#039; =&gt; &#039;forumarles@harmoniamundi.com&#039;,
+			&#039;activites&#039; =&gt; &#039;Librairie IndÃ©pendante&#039;,
+			&#039;commentaires&#039; =&gt; &#039;Horaires d&#039;ouverture : du lundi au samedi de 9h30 Ã  19h15 Superficie de la librairie : 170 m2Surface rÃ©servÃ©e aux livres : 150 m2Nature du fonds : livres neufs, CD, DVDRelation(s) avec les bibliothÃ¨ques : animations (signatures)Organisation d&#039;animations dans la librairie : dÃ©dicaces/signatures, expositions, rencontres, lecturesParticipation Ã  des animations externes : colloque, salon, festival&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.675966&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.626217&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 9
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 10 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;7145&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;SALON DU P&#039;TIT LECTEUR&#039;,
+			&#039;adresse&#039; =&gt; &#039;HÃ´tel de VillePlace de la RÃ©publique&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.arles.fr&#039;,
+			&#039;email&#039; =&gt; &#039;crocolire@yahoo.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle&#039;,
+			&#039;commentaires&#039; =&gt; &#039;Forum petite enfance : rencontres, Ã©changes, spectacles, contes, jeux, expositions, ateliers, stands... &#039;,
+			&#039;latitude&#039; =&gt; &#039;43.67615&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627436&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 10
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 11 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;8549&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;LES Ã‰CRITURES DU CINÃ‰MA&#039;,
+			&#039;adresse&#039; =&gt; &#039;Actes Sud - Place Nina Berberova&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.actes-sud.fr&#039;,
+			&#039;email&#039; =&gt; &#039;contact@actes-sud.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Manifestation annuelle&#039;,
+			&#039;commentaires&#039; =&gt; &#039;&quot;Pour cÃ©lÃ©brer les liens et la circulation des inspirations entreÂ littÃ©rature et cinÃ©ma&quot;&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.676675&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.627502&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 11
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	),
+	(int) 12 =&gt; array(
+		&#039;Ficheactivite&#039; =&gt; array(
+			&#039;id&#039; =&gt; &#039;9405&#039;,
+			&#039;nom_complet&#039; =&gt; &#039;FESTIVAL PAROLES INDIGO&#039;,
+			&#039;adresse&#039; =&gt; &#039;L&#039;Oiseau Indigo DiffusionMaison des Ã©diteurs et des industries culturelles7 rue Yvan Audouard&#039;,
+			&#039;code_postal&#039; =&gt; &#039;13200&#039;,
+			&#039;ville&#039; =&gt; &#039;ARLES&#039;,
+			&#039;url_site_web&#039; =&gt; &#039;www.loiseauindigo.fr&#039;,
+			&#039;email&#039; =&gt; &#039;loiseau.indigo.diffusion@orange.fr&#039;,
+			&#039;activites&#039; =&gt; &#039;Transdisciplinaire ; Manifestation annuelle&#039;,
+			&#039;commentaires&#039; =&gt; &#039;&#039;,
+			&#039;latitude&#039; =&gt; &#039;43.67328&#039;,
+			&#039;longitude&#039; =&gt; &#039;4.639313&#039;,
+			&#039;commune&#039; =&gt; &#039;13004&#039;,
+			&#039;ze&#039; =&gt; &#039;9309&#039;,
+			&#039;bdv&#039; =&gt; &#039;bdv_13004&#039;,
+			&#039;epci_2012&#039; =&gt; &#039;241300417&#039;,
+			&#039;arr_sspref&#039; =&gt; &#039;132&#039;,
+			&#039;dep&#039; =&gt; &#039;13&#039;,
+			&#039;num&#039; =&gt; (int) 12
+		),
+		&#039;Activite&#039; =&gt; array(
+			&#039;root_id&#039; =&gt; &#039;04&#039;
+		)
+	)
+)
+</pre>
+</div>%PDF-1.7
+%âãÏÓ
+28 0 obj
+<< /Type /Page /Parent 1 0 R /LastModified (D:20140217162027+00'00') /Resources 2 0 R /MediaBox [0.000000 0.000000 595.276000 841.890000] /CropBox [0.000000 0.000000 595.276000 841.890000] /BleedBox [0.000000 0.000000 595.276000 841.890000] /TrimBox [0.000000 0.000000 595.276000 841.890000] /ArtBox [0.000000 0.000000 595.276000 841.890000] /Contents 29 0 R /Rotate 0 /Group << /Type /Group /S /Transparency /CS /DeviceRGB >> /Annots [ 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R ] /PZ 1 >>
+endobj
+29 0 obj
+<</Filter /FlateDecode /Length 1518>> stream
+xœí[ÉvÚHİóo{A¥•†î1(nr0¶Aô&ÎB™(G Dî|RÿIò)ş‹~„„&‘-;àÃ¡,ôj¸oº¯JP"Š/¸
+oñıŞ½Ç¾Ïğ=¬œ:ğúÆ	¾À¹Û©Ğ}?oü„aå—²?C_ü—7]Óš6û#xİ¤ĞáªRYwÃ¨bJJ„%ÊÔëA¥[¹ÚşÛY~ó÷hXá&r>OJ8§µ@
+»Ô³«U\²)Li
+ˆ<¸…Í’Xc†¾¦±4˜nà4!5±4˜i±û`»®LŒ]†ù+ÓLA˜iqö+&'’qª?1Ø®+ã&CÀ4Óä°2†ƒ1ilûÊr Ë±}ú/³Y—˜¶êd{mìk#DÛFùxŸ·IGCÀÉà¢‡kw8—ìªÀé1‹[“4JĞQ4DİÀ»£Z§ewáM­é@§½şüœ·™èÕ&øwÀjPYAa:AC| %Ã¾ï&~8†Ó4¼¯jQöÉ°ÏÔƒO;†ı0àô¿Q`{aøPp&8Ş73gg+Ã›kÛ°`”¦¯ÃÍìâÖõ“Ø‹o¦ÆBÒñMÉm´ gI^äÆÆFCs:P§1Ÿfö6‚¹Æ%ÓÀFéİ¬Q·Ø²·öâ'÷×Gñõ1üqîı[/NfîëÇ©‡JYòÍıÓ×F¬¶%Øg›¶/ëW¨Rr¢™:—|®Ên·™¥¡†­8Z£Wwšmh5ç[§ÖìØ`·ç‘çú¨æ´jİëã’… âQC%-mZ½é´ 
+vüÉí{ğ7f¦³pøá©²QñËÇlM•å—8ı‹ŸÍF«`Üİİ7	Ü¸Ú÷“€„Ñp]Ò™Ì-ÈÀ¤M{/c
+ÚCèy¨P1gäª7gz;Ù Âe©¹Ş±ÊåFi5XÒ "‘D¨~ókIÄöéJÚ‡eı
+UJFLjQ3çƒ=§cŸÛmM§d	¡x0¸A,f,À8wı8ÌKÕ‰ï›×¶Ü„iàMÜh€wÄĞòû^üb«X‰IOS )1o(¾Š]Ã%?9¹<oCÙ*1ÌKJÂ^ZÂ)Şú(_rÌü	Ñ¿ŠİÄK#¼ÂöhvOà'É}äúÑ¡¶İGá…3MDØf‹Úö¢Ş¬MËÙFÎ¿½­µKvŠÇDXÄÖ“Ë «XÛşØ…S/ºñ¢pâf{©¥Â|±¬†9š+(”8_À®‚‘°7ò>ºcÒGëR‘ÆõÜŠ²3$>íºŒ©h¡ç¡?Å–1«=UÜ‰ÛO¼¸§•L,ÍunZD/¯Ë@K¨>ó\âPâ>(¼pò(t$R3¤>¯êì2‰¿¾^õl8ïµ›õæe­e—,w
+²	ªó*+àP…¿xsøÿ@Çû’Q®½ÜsZ‰Q*€0¡£œÄ¢ø
+wŒ‘7ğİäƒ÷9õÈÄÇ€XÜn(w3é¹m1Æˆ1¦Œ9j¡ç¡KÅ®³@½^•'T©
+‹ÜÃ€qØ¹ø¿Q…²%GZau7vØ‚ØCs…óD´†´æ<±~Ñj}=³¡ÙvìN{ºQkA³Ãü¨İîuºÊY{Ù+0‘=#€ı.GêœKb*ëş­w$VÁØíH=“š›ÎáHıIT¨˜3¦|Õw;RçŒçz?©/5vDAõ›Ã®ÄÓÒ‹Â‰!ÓÑ)Õ¸œ)¼e×²†Å#z%KÅ"¬Í êsäı4HÒhjòƒÎï?"§(åñGñ(a¦ä
+JÙ.…('Ù(~—bŒ?×r+;<‰ş[FÎ züNÇ™Ğ\ç/ñø£ø ‚¾ úLé P©ğÓU¥G¾¾Çü²úCILƒˆ€¶ubq}ùr ]ØŞõşdRÍÊÌ4\Ì"ß˜?}‰üá‡şEÉ4¨E}wàÁ¥Ûw	8aÃ 
+ı$†è>ö¢É}L}B
+ÿDçì¿
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 1 0 R /LastModified (D:20140217162027+00'00') /Resources 2 0 R /MediaBox [0.000000 0.000000 595.276000 841.890000] /CropBox [0.000000 0.000000 595.276000 841.890000] /BleedBox [0.000000 0.000000 595.276000 841.890000] /TrimBox [0.000000 0.000000 595.276000 841.890000] /ArtBox [0.000000 0.000000 595.276000 841.890000] /Contents 31 0 R /Rotate 0 /Group << /Type /Group /S /Transparency /CS /DeviceRGB >> /Annots [ 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R ] /PZ 1 >>
+endobj
+31 0 obj
+<</Filter /FlateDecode /Length 1525>> stream
+xœí[İrÚ8¾ç)Î]ÛTK²ü³{7ÖB(8İÙizáØ&Õ±©l'ÓGÚGé£p¿°²cˆa°4n&Báèç;ß‘@ALWäî@÷òù|ú,ÿøòùdªëÚš†¸i½qàõ¬ ¥x€3†®ÓR¶	‚dYğëÆ ÕÍyWş£k‹Wó†®1d˜EÓ›Àk[NZ­uo˜´¦ jR]ÁÕş°5j}xlı5@²uHb ÊÊ(ˆEWL`ÔCjyoÛ0¥3(ˆ ÆğÈdx¾²ÿ6–&Ó˜‰˜JåïÒdyc÷ÉvİÓ1¢šFuã&ÛugªA6L‚éÀ¸ëÎ¨AÃDQõŸ 3b`	˜jä'ìËÉ0Óu¼¼3BWu¶ê©‹Æğí½¿Àêª¿ì!´q¬»İ6Ë#8|İ&-n@.F.@<ôİÉµä½T.›Ä”GU´yUèøğéeÏ~3´ì¡İëÔé`tÙv¥İ·œËa÷ÕgpŞçc}ØlïE¨_ŒÖ4²JƒĞõèóÈ…7¸D|+[œpEE¤‚¦¥`{Ò6Î"˜P”­ilÃ+
+ÂÚZ0îîîPÈ¯…Ë\/’$ó‘OÈ,	Ó¹=a¼fm¹†RyÔÚˆä^ ï	ÿB‡¡Ê³ÖL¼äÜ^¥R'…Û¹Çb¡Äe±Ò Li´±*lh4Ñ$›®:å¥ü–§³«—ÉÕ+ø­7÷%°#6"ßÒ`)¶>9CŞNq–DlßÖS¨’šÈ44ÂÈ*‰è\ÂÀêYö¨aù¡~H$cPLu	–‚Y ÓĞÀ tÁ‹3‘sŒ•_ÅêGAæ9VEù¾F2†Ç±øQÆ°
+Æ‚-øÙÔ]ÈÏÜğÚGQ®#ù¥YÉÈ‰(.&;¬S»E2™µ«~ù´Ygûò7bµ-UlÖ©@0†‘¡˜ŠQˆ³‹áå9¼³†ç}Û‚óË~ÇnX©¢#ëLh›yÇÏ` f	÷ƒ(…?x˜ÄÑÑ–©3¤V0hpÒ©¿L]c‹lâŠ0HN¾¸bGÜd‘Ï7UªL†ƒÒ °*mK+&:„S¿5*dÉ#ŸËœºNíÜAÕ¨¬óeß«rdõ.úE‰óÂ±èuOîå°a!¦~Tdñ§SsÊ»Ò Ìkœ<¸?*½/y†³ivò¯Yp´*0© ÑàäSÅ³
+F~FZäê‰ÚÒûµ¹)16·‰¹f¡ÃP^ÅeX®ºµ'b/¹N¾¹_âxı™h.T*ÜÇFê’,Tf…,œ»Iê¦<À¢,!ö¹:İC•µó>ªIŞÇTiå™¨L ßO‡v~}:ÊIÃ©İÿ~n5,'Ô‹dŠF°Xù%Œ2Ú°îVõh«T*s« Ñ`¢P•º
+FAÖ]¿­È”–¤kH3Š±›˜kö:VŒ9Ëıíx…J1«ıù
+u©±#ì
+^r›§¥Ïgª¬ùIˆ®3³d~gİ‘c´z0°†yN°ûûíEÃ2Cı°PQƒ-`é½¸àIàfùi¿‰¡ÃÇã,ÉÍûÜåIœß­&0óyd" -^óÈÏ’TpÙô²0ÍDî	èÅÉøŸ·nVæÇ™+ü£=– „!£‚cƒÙFıÇ«`İŠ»â…Ym`¹\iŒ&FÚıÇµ›˜®ö:%VZR‡j`(õ‡Júó¸p7º	Öó‚ÉÜ0Ãˆ©?¬Hç¨zÒ
+q$ö‰ÏOCYÕq‰çïph‡5¤‡ï˜ì¬çG§ÚA›t­6ÒîÃ[[Eªª’¹.ñ] ®¿s:èœÁU(SoêQ,n®^UtV—lµjøOeD²~Äywõ«!²ÀÌ1¢0‘m™D[îaÛ‡Şßİ0cH5IŞ¥b„±Ai©¢ÓxúMğ›/)ü-]«`	Ïõ¸‹À‰³|ó41Kq;KPİ:û‰‹yR
+endstream
+endobj
+1 0 obj
+<< /Type /Pages /Kids [ 28 0 R 30 0 R ] /Count 2 >>
+endobj
+3 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica /Name /F1 /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Name /F2 /Encoding /WinAnsiEncoding >>
+endobj
+32 0 obj
+<</Type /XObject /Subtype /Image /Width 379 /Height 76 /ColorSpace [/Indexed /DeviceRGB 98 33 0 R] /BitsPerComponent 8 /Filter /FlateDecode /DecodeParms << /Predictor 15 /Colors 1 /BitsPerComponent 8 /Columns 379 >> /Length 3575 >> stream
+xœí]msÛ¸)1}qI]ÇdÕq¤œ·ãT—›±®9ÉéÍuâ&Ó2fçjOn¦ıÿ¿¢X ,^(É’#Ù9í‡X"°ÀîƒÅb± •ŞsJşm»£Qïå¡gœşğÀ©×ëùÿçpzñvQ¯^ß3ı³×¡ÈC¦+F«ğõ–¥õÅ{ÖÙö÷‡‡oŞüpş›££ç{	-¤.K©$¸´r§ş®œ½„?/úéÍùù·ççÏ_½r|Î—€ü24äns_b:€£fego_¼~ıû‹‹££?ÁÂùÍ2ç—½¦¹.e®óy÷îææÙ³gÊ[şxÂõŸ>}úö£÷"@Yy­}¼>çŠÒ
+nû†‘ú¢VÓó‹‹‹}øğóû÷ï¹§ø|±Ÿ%à22?4òÁşŒmOT·/^¼899ùÛ× ì‡£££?¨@ß}.\WÀşQĞË³››wêË[Foıãü¢‡££_áne›¸.C½îÕzÙ¹K*ß°ÌÃŞ¨-ÆóOğkf°ÿ`%¬¯¾Ù6p÷@®î5ge$­`ÿ&K®®¾ÿøñãWÌœ\p{tô³X»ÿû²½^ËTq1],¬]',(øú“v±‚¾{¸ÀQ•›ë®w¥í’À–ÅCæá%–qÀt±°v=\\—¡²iÂ|sİ¸O “ƒ`Ÿ1\dK×ß•‹}/]Áÿ6'Õ–(Î²ëv×±Ö«•7_¥YVl²¿Ş&;{à”d›ô8;ì·I;ì·Gˆı4Ëş¡ÊªØ#øër7MB¿¶TÕÅ©3móQ”ea4‘¤5ö)²ŸÍï?jšFqp*&ØO¿ß_Fn/sŸ2ïK¹Kè-Ò
+‘öX_bY?›çn5‚«[„ØìahëÎzn:uXa¨¿æ5r…³bË‚8µû÷bßdc-fMu±ÜFMÅìŒ7‘;;È©²aª‹€5®N‘Â~ O9h–İíwé 9€òc‰¥.«/ösûWØÓ:Ç¢sä¶kN]ŞÊ–cl!·£+Ë´AÉ13º5QòcÏÇ‘XA	_G@A—šh³àtŸMÅ©}BIR&½ ûàt^ÿöP±ĞÊá#Nrû™ÌåÍC0–d4ˆµáÂödY™„ªŒc›Õ\”¼Øï‹1ü•|:T&G„VİMÊÄÂ£4t­Ñ‡ıüşìù‡rÉF¼#A´ªY®Q>…2ØJÄ9éØ5MawkãêÃ>uFuW”ˆ9Wê*‘WÍB™%è¹×
+Oms­}¡G]{ÅìTÕr”ºl‚V-ğÎ‰´eãêÃ_ÍËz¡îŠ$Ç±®{ÕŒÕ°çUU¥í½Û½ş´öÜ^½Uµ¹‚ë3ØÀ‰2¾`HïÏiËÆÕƒı„5Æ}lºHw$pÊÑX‘¶.¹¼³ûÅ~œ¡nËc¯¦Ş5b·/>3­G=Ê¤:ºØÁÕƒ}Áêä0ÿ0LZˆ=L»<gl’c"º£‘5 ./yá³¿V'ö4¾g©*ÁåjwL X`÷À|ª˜—âõ`ßG<@(©Supu±‡Ò‚ã©üÆì‘£i#Ò²‹í\ì×´{$9¥É®`	ì‘œÓà-åC£=tT­5S{s51qu±/ÏDØ®»ğê !åÉ1
+-(ºxïûÈŞ[-e÷&ó°'íR»¡Ü”„`®.ö°%ÍÅ0áşwöv–e6d8ü¼Tòõ| #ˆúAGßØ¯Ãìğö—Ã?Š© ¶%ªØEÉÁk(úØf>ö>IUíuØj1±p½µ6eÿ;»šk÷‚AÓÁ°U¡^Âîå_åyá™%ûAFh2_wAÇ£ôï#Æ$ÀØqN¤E¾{ŒI˜ª±°YŞ'&®°’Ö	à½%E9:^¥‰§†ıÖ)<²x³8h²şè}LÈÔXx¥q†À|Ø4L_# „Ì[ì›«ŞVA…{nOU³Ï¥öV¨~öàjco%¯·’-˜‡#?–éT@ø”ÔUûo¾A¶	Ìç|òÛÏG»¦¼ ààÚ¼P£…zÇ¿B|ÿ4³Ó®Ü¼ÏS£’'§ ø…½WSÏ÷Ğ£Š(ináÔ•hj!ŸĞ4&$=Â‚•Nõğ	2òN‘~2`O2åo«$=˜ıcƒØ5ƒ,Ëˆ35òa¶ÜÎ L³Ã‹}îé|™bÓ:üBÖ¸‘šWSÏì{1ÃîKLi² šá0ô@9X½Z‡œÔ““CÆ}’ú{0û§¸¼(eAWgo¥ÏNŒVmì¹ó´÷V2<&ìEštjáU)”ôù†ÂÕ”¨§\PÍšHaorˆîKİ“„œ ûì¤m/CûIcö`cßCL˜8«¶]ãìi.öªuÅlTİ7åvûtÏNˆ¼ñù@å5	®¦=½p´z=t}ÑÁá€˜2/áÈ0‹ÔáâçkúÌ°U§qº@›(ÙhÙgtd’Ã@:ìûZõ3—vÕjQŸJƒ‘ïœ°ö£4p$Ú•ovØovØovØovØovØovØovØovØovØo~™ØçÃÍ¾aâ'{LÒ…µ'7³Sà¸ñ]û¹¥IÅ¹eµ•n]Ü†ÈwÔÍ*äjäb­“máØÃ±ŠÉË7æqÀJ$oæé´iÂ€îøZ[ =B®F.öc¸õTE*¥·Yªh
+p}ì™I•C<.(Ááä±L½§·-Bì›©R\ Y‡¼ØãÇÂ¼k³)*š˜^a\û-(¿•¡øùKPŠYÌfË4ƒØßJc/²x]t<ØëS‹ô&üİ)³k¼l
+§kŠ+ÏxçqĞq¨ë¯†^8›ëuÑ™k÷m¸§3aN "W×S0 7|#ß'dóÚ¡_šØßÜhìƒ¢h'Q'?°	Cq–“àBÈ·JM8XE\Fq©åZpNğKİèº&Jr…1P™š)HâŒËÄé 
+YïÖe¡–Ï]÷í;­D[°å (‘@õhl‘!dª¢P/mÔcşÂgĞ\ì¥ÏaØÂ©Ü5L‡ìC(B†
+ú’ß_	†p¢O®¿ÉKZò;qçS~¹î®„™7Jã†š‹·ÕZ‚½jP_%O}ùàÂû^üûĞúÚu)¨?lCuyÖhQ‘¼õí!Õkq
+ûƒ–Ì ï§)øLZ°ÖNeÙ$oÓ(`ÎsÊº«¢Œh,a¨ùß(+8ÕÖW°y›f³KNœE0^Oy¬!êş%Ì<‘BÉ­¥Ğc¨°ÏhP>`«Âûz*¾²)ü©
+§Á±‹}ÜÔ\	i–XA¶Xš^î2ËØ	
+óÈ×RĞHŒ¼‹½‚Ï¤ebÌ@]?R³l
+¨Ä}­€ß_©äª_É*x—¡•ÊFç ı>Öm<á]Ì;ë[7ÚîùßHƒ[›=ŞOÜì»-¡:ÖS	•Ù"RÔˆë¥Ovb~clÜFMåÊâÁŞÿÃ0^ì±¼šˆ7@F „|>àw!´a7ã|ÜšÆtÕÖuİMk%4ÈqN¨8GßÃ‹Dƒx%2äßº°w}RBúJ¬`¶ˆ„c_Ro	”Ç²]öşMØìë½Àh£%æ%­¹°Öêõ¼%'5á2çS³®¼ì"Ì:‘s¢P— öt0sP’ìö2PÊ…a(Õ±Tf ¦(jgµØZºW´dvl)>‹Æ¾õÒü8ÇjL!qLñM=u=ª¤UEM³«.Å™’°Œ	öVƒŠõZ{-b	Š½k÷Z	n(šÕbKëX0!KÄ
+«–øzí†°gÑHÎÜ¤¼M’*TF„f×%t ®Œ‡æºØc>N"À?´˜cZJìÍMİ)‚THé¿ÒÙ¬rX„Ò÷„½®b•,˜Ïş=¶¶aó|N÷ÊHŞÛ’vKü½è ²|!iÑØ¯ùÒ½UÁÍÄö9Ò,:ZT>‡XO$_ëâ	:ÁëÛ×ŸÉî#\±Å2Å°¨RşÙ\ÌM35‡¦0®‰]ñ-§P€FìŞZk}¹åÔ0VïÁÈœB÷ZëIU®µÆJä¥†ãWkëõíŞušY…gµ"Ì
+åú¤¿óº&:‰1/­ºšJ’˜ò˜O™­c&¸´ñâ4Gá¨UåÒ kÏ•ÀÈöVÆ˜r¸Ì‘0qPkXFTHşC6åì0ú)¤İw%-\ì/ç`ÏlƒnKDj\öZómWPÊ³°°Ï‡bo5åyšÕÌë#ë‡/ }½[9å ¨¤	³4Ø[íÉ†ƒïÏRÙHÃx+îuì	¥ey¢rÈ1ï])ÊL¾Ñ¢¢±»·¢B– dj&é’,d{© Éîìs®a"Ì˜ÀcˆT¿]à½h1è}Ãß's'¡ü…¬Û·¶¡qÎĞí˜?
+3qMÛÍ)@ƒ!Ã1WË„ï(Ğ>;±”À-i£Ecårr
+¦ıì« lø[BÑ}NåL[zº@ÓP@5É~L¢8;ÆƒÆaß:š0riíïX]÷PrÏxONDÌãZL-¶è^¹´|PkQª„UëÊÎÙg†ùDQ¸Gq?’-ŞÊ¡Za]BFL
+i¬çE¿°±g-rA%Kª_…4éñœ•oå,á³ÒãÁ~íC”GûİovØof³öÛ¢û¸$õ°¨ûÿx8Ôù<rú?˜Åò†
+endstream
+endobj
+33 0 obj
+<</Filter /FlateDecode /Length 308>> stream
+xœ)Öş½	$ïïï{{{ooo¶·¹™™™¿4í»¾ØiyÙ}Šıÿú¶¶¶ÆÇÉ…†ˆ­­­æææÈ=PrrrİßŞÍanÌÌÌÅ3F÷÷÷¥¥¥¾	*………ç°¶ÅGSŞ•œ¾)¾¿ÁĞÒÑïÍÎÌSb‘“ÇÈÊÁ7GÌBRâ ªøææ¾¾¾¾0Å!9ğÈĞÜtÊGUÓÒĞ‘ñØÜÍDXÜ†‘ÅÎÅïÎÖ×u„npoüòñË9LÊ2GÅ(=ÀÂÁÅÎÎĞÑÓÙİÜ’„Œ„ÊGWÓkv÷ÅÎÇ:KÆEYŞ{ŒÃ3Ã'Ô^nôËÏã“ÅJZÕq{Ş‹•mqrÅ3HÒÓÕÿÿÿïÉÔÅBJÆCSÀ,À#8‘ÎÖÖÜs„à¢­Å)BkksÙ†òØÙÖckÿ÷ï¸T
+endstream
+endobj
+2 0 obj
+<< /ProcSet [/PDF /Text /ImageB /ImageC /ImageI] /Font << /F1 3 0 R /F2 4 0 R >> /XObject << /I0 32 0 R >> >>
+endobj
+5 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 702.021417 218.549291 713.581417] /Contents (şÿ h t t p : / / a r l e s f a i t s e s b u l l e s . u n b l o g . f r) /P 28 0 R /NM (0001-0000) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://arlesfaitsesbulles.unblog.fr)>> /H /I>>
+endobj
+6 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 613.844252 178.509291 625.404252] /Contents (şÿ h t t p : / / w w w . a t l a s - c i t l . o r g) /P 28 0 R /NM (0001-0001) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.atlas-citl.org)>> /H /I>>
+endobj
+7 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 601.344252 110.289291 612.904252] /Contents (şÿ m a i l t o : c i t l @ a t l a s - c i t l . o r g) /P 28 0 R /NM (0001-0002) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:citl@atlas-citl.org)>> /H /I>>
+endobj
+8 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 513.167087 155.339291 524.727087] /Contents (şÿ m a i l t o : a . d i t @ f r e e . f r) /P 28 0 R /NM (0001-0003) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:a.dit@free.fr)>> /H /I>>
+endobj
+9 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 424.989921 181.289291 436.549921] /Contents (şÿ h t t p : / / w w w . l e m e j a n . c o m) /P 28 0 R /NM (0001-0004) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.lemejan.com)>> /H /I>>
+endobj
+10 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 412.489921 123.639291 424.049921] /Contents (şÿ m a i l t o : m e j a n @ a c t e s - s u d . f r) /P 28 0 R /NM (0001-0005) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:mejan@actes-sud.fr)>> /H /I>>
+endobj
+11 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 324.312756 211.869291 335.872756] /Contents (şÿ h t t p : / / m e d i a t h e q u e . v i l l e - a r l e s . f r) /P 28 0 R /NM (0001-0006) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://mediatheque.ville-arles.fr)>> /H /I>>
+endobj
+12 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 311.812756 153.089291 323.372756] /Contents (şÿ m a i l t o : m e d i a t h e q u e @ v i l l e - a r l e s . f r) /P 28 0 R /NM (0001-0007) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:mediatheque@ville-arles.fr)>> /H /I>>
+endobj
+13 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 223.635591 178.509291 235.195591] /Contents (şÿ h t t p : / / w w w . a t l a s - c i t l . o r g) /P 28 0 R /NM (0001-0008) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.atlas-citl.org)>> /H /I>>
+endobj
+14 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 211.135591 110.289291 222.695591] /Contents (şÿ m a i l t o : c i t l @ a t l a s - c i t l . o r g) /P 28 0 R /NM (0001-0009) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:citl@atlas-citl.org)>> /H /I>>
+endobj
+15 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 122.958425 181.289291 134.518425] /Contents (şÿ h t t p : / / w w w . l e m e j a n . c o m) /P 28 0 R /NM (0001-0010) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.lemejan.com)>> /H /I>>
+endobj
+16 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 110.458425 123.639291 122.018425] /Contents (şÿ m a i l t o : m e j a n @ a c t e s - s u d . f r) /P 28 0 R /NM (0001-0011) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:mejan@actes-sud.fr)>> /H /I>>
+endobj
+17 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 702.021417 218.519291 713.581417] /Contents (şÿ h t t p : / / w w w . l i b r a i r i e a c t e s s u d . c o m) /P 30 0 R /NM (0002-0000) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.librairieactessud.com)>> /H /I>>
+endobj
+18 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 689.521417 128.649291 701.081417] /Contents (şÿ m a i l t o : c o n t a c t @ a c t e s - s u d . f r) /P 30 0 R /NM (0002-0001) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:contact@actes-sud.fr)>> /H /I>>
+endobj
+19 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 601.344252 241.479291 612.904252] /Contents (şÿ m a i l t o : l i b r a i r i e d u p a l a i s l i b @ c a n a l b d . n e t) /P 30 0 R /NM (0002-0002) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:librairiedupalaislib@canalbd.net)>> /H /I>>
+endobj
+20 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 513.167087 248.129291 524.727087] /Contents (şÿ m a i l t o : f o r u m a r l e s @ h a r m o n i a m u n d i . c o m) /P 30 0 R /NM (0002-0003) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:forumarles@harmoniamundi.com)>> /H /I>>
+endobj
+21 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 424.989921 155.169291 436.549921] /Contents (şÿ h t t p : / / w w w . a r l e s . f r) /P 30 0 R /NM (0002-0004) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.arles.fr)>> /H /I>>
+endobj
+22 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 412.489921 118.079291 424.049921] /Contents (şÿ m a i l t o : c r o c o l i r e @ y a h o o . f r) /P 30 0 R /NM (0002-0005) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:crocolire@yahoo.fr)>> /H /I>>
+endobj
+23 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 324.312756 176.849291 335.872756] /Contents (şÿ h t t p : / / w w w . a c t e s - s u d . f r) /P 30 0 R /NM (0002-0006) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.actes-sud.fr)>> /H /I>>
+endobj
+24 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 311.812756 128.649291 323.372756] /Contents (şÿ m a i l t o : c o n t a c t @ a c t e s - s u d . f r) /P 30 0 R /NM (0002-0007) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:contact@actes-sud.fr)>> /H /I>>
+endobj
+25 0 obj
+<</Type /Annot /Subtype /Link /Rect [100.169291 223.635591 191.859291 235.195591] /Contents (şÿ h t t p : / / w w w . l o i s e a u i n d i g o . f r) /P 30 0 R /NM (0002-0008) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.loiseauindigo.fr)>> /H /I>>
+endobj
+26 0 obj
+<</Type /Annot /Subtype /Link /Rect [34.019291 211.135591 185.349291 222.695591] /Contents (şÿ m a i l t o : l o i s e a u . i n d i g o . d i f f u s i o n @ o r a n g e . f r) /P 30 0 R /NM (0002-0009) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (mailto:loiseau.indigo.diffusion@orange.fr)>> /H /I>>
+endobj
+27 0 obj
+<</Type /Annot /Subtype /Link /Rect [5.669291 -4.669291 21.839291 -3.513291] /Contents (şÿ h t t p : / / w w w . t c p d f . o r g) /P 30 0 R /NM (0002-0010) /M (D:20140217162027+00'00') /F 4 /Border [0 0 0] /A <</S /URI /URI (http://www.tcpdf.org)>> /H /I>>
+endobj
+34 0 obj
+<< /Producer (şÿ T C P D F   6 . 0 . 0 1 0   \( h t t p : / / w w w . t c p d f . o r g \)) /CreationDate (D:20140217162027+00'00') /ModDate (D:20140217162027+00'00') /Trapped /False >>
+endobj
+35 0 obj
+<< /Type /Metadata /Subtype /XML /Length 4237 >> stream
+<?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2.1-c043 52.372728, 2009/01/18-15:08:04">
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<dc:format>application/pdf</dc:format>
+			<dc:title>
+				<rdf:Alt>
+					<rdf:li xml:lang="x-default"></rdf:li>
+				</rdf:Alt>
+			</dc:title>
+			<dc:creator>
+				<rdf:Seq>
+					<rdf:li></rdf:li>
+				</rdf:Seq>
+			</dc:creator>
+			<dc:description>
+				<rdf:Alt>
+					<rdf:li xml:lang="x-default"></rdf:li>
+				</rdf:Alt>
+			</dc:description>
+			<dc:subject>
+				<rdf:Bag>
+					<rdf:li> TCPDF</rdf:li>
+				</rdf:Bag>
+			</dc:subject>
+		</rdf:Description>
+		<rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+			<xmp:CreateDate>2014-02-17T16:20:27+00:00</xmp:CreateDate>
+			<xmp:CreatorTool></xmp:CreatorTool>
+			<xmp:ModifyDate>2014-02-17T16:20:27+00:00</xmp:ModifyDate>
+			<xmp:MetadataDate>2014-02-17T16:20:27+00:00</xmp:MetadataDate>
+		</rdf:Description>
+		<rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+			<pdf:Keywords> TCPDF</pdf:Keywords>
+			<pdf:Producer>TCPDF 6.0.010 (http://www.tcpdf.org)</pdf:Producer>
+		</rdf:Description>
+		<rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
+			<xmpMM:DocumentID>uuid:7dd3ecb2-793f-dfa5-a285-c5727acd4326</xmpMM:DocumentID>
+			<xmpMM:InstanceID>uuid:7dd3ecb2-793f-dfa5-a285-c5727acd4326</xmpMM:InstanceID>
+		</rdf:Description>
+		<rdf:Description rdf:about="" xmlns:pdfaExtension="http://www.aiim.org/pdfa/ns/extension/" xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#" xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#">
+			<pdfaExtension:schemas>
+				<rdf:Bag>
+					<rdf:li rdf:parseType="Resource">
+						<pdfaSchema:namespaceURI>http://ns.adobe.com/pdf/1.3/</pdfaSchema:namespaceURI>
+						<pdfaSchema:prefix>pdf</pdfaSchema:prefix>
+						<pdfaSchema:schema>Adobe PDF Schema</pdfaSchema:schema>
+					</rdf:li>
+					<rdf:li rdf:parseType="Resource">
+						<pdfaSchema:namespaceURI>http://ns.adobe.com/xap/1.0/mm/</pdfaSchema:namespaceURI>
+						<pdfaSchema:prefix>xmpMM</pdfaSchema:prefix>
+						<pdfaSchema:schema>XMP Media Management Schema</pdfaSchema:schema>
+						<pdfaSchema:property>
+							<rdf:Seq>
+								<rdf:li rdf:parseType="Resource">
+									<pdfaProperty:category>internal</pdfaProperty:category>
+									<pdfaProperty:description>UUID based identifier for specific incarnation of a document</pdfaProperty:description>
+									<pdfaProperty:name>InstanceID</pdfaProperty:name>
+									<pdfaProperty:valueType>URI</pdfaProperty:valueType>
+								</rdf:li>
+							</rdf:Seq>
+						</pdfaSchema:property>
+					</rdf:li>
+					<rdf:li rdf:parseType="Resource">
+						<pdfaSchema:namespaceURI>http://www.aiim.org/pdfa/ns/id/</pdfaSchema:namespaceURI>
+						<pdfaSchema:prefix>pdfaid</pdfaSchema:prefix>
+						<pdfaSchema:schema>PDF/A ID Schema</pdfaSchema:schema>
+						<pdfaSchema:property>
+							<rdf:Seq>
+								<rdf:li rdf:parseType="Resource">
+									<pdfaProperty:category>internal</pdfaProperty:category>
+									<pdfaProperty:description>Part of PDF/A standard</pdfaProperty:description>
+									<pdfaProperty:name>part</pdfaProperty:name>
+									<pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+								</rdf:li>
+								<rdf:li rdf:parseType="Resource">
+									<pdfaProperty:category>internal</pdfaProperty:category>
+									<pdfaProperty:description>Amendment of PDF/A standard</pdfaProperty:description>
+									<pdfaProperty:name>amd</pdfaProperty:name>
+									<pdfaProperty:valueType>Text</pdfaProperty:valueType>
+								</rdf:li>
+								<rdf:li rdf:parseType="Resource">
+									<pdfaProperty:category>internal</pdfaProperty:category>
+									<pdfaProperty:description>Conformance level of PDF/A standard</pdfaProperty:description>
+									<pdfaProperty:name>conformance</pdfaProperty:name>
+									<pdfaProperty:valueType>Text</pdfaProperty:valueType>
+								</rdf:li>
+							</rdf:Seq>
+						</pdfaSchema:property>
+					</rdf:li>
+				</rdf:Bag>
+			</pdfaExtension:schemas>
+		</rdf:Description>
+	</rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>
+endstream
+endobj
+36 0 obj
+<< /Type /Catalog /Version /1.7 /Pages 1 0 R /Names << >> /ViewerPreferences << /Direction /L2R >> /PageLayout /SinglePage /PageMode /UseNone /OpenAction [28 0 R /FitH null] /Metadata 35 0 R >>
+endobj
+xref
+0 37
+0000000000 65535 f 
+0000004286 00000 n 
+0000008790 00000 n 
+0000004353 00000 n 
+0000004459 00000 n 
+0000008915 00000 n 
+0000009239 00000 n 
+0000009533 00000 n 
+0000009829 00000 n 
+0000010108 00000 n 
+0000010393 00000 n 
+0000010687 00000 n 
+0000011006 00000 n 
+0000011324 00000 n 
+0000011619 00000 n 
+0000011916 00000 n 
+0000012202 00000 n 
+0000012496 00000 n 
+0000012812 00000 n 
+0000013112 00000 n 
+0000013449 00000 n 
+0000013774 00000 n 
+0000014051 00000 n 
+0000014345 00000 n 
+0000014634 00000 n 
+0000014934 00000 n 
+0000015235 00000 n 
+0000015577 00000 n 
+0000000015 00000 n 
+0000000558 00000 n 
+0000002148 00000 n 
+0000002689 00000 n 
+0000004570 00000 n 
+0000008411 00000 n 
+0000015852 00000 n 
+0000016054 00000 n 
+0000020374 00000 n 
+trailer
+<< /Size 37 /Root 36 0 R /Info 34 0 R /ID [ <7dd3ecb2793fdfa5a285c5727acd4326> <7dd3ecb2793fdfa5a285c5727acd4326> ] >>
+startxref
+20584
+%%EOF

@@ -1,0 +1,94 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 nov. 2013, 11:02:26
+    Author     : e.brost
+*/
+
+.text_content{
+    position:relative ;
+    float:left
+
+}
+.text_content.annule:after
+{
+    content: "ANNULE";
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 1;
+    font-family: Arial,sans-serif;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    font-size: 40px;
+    color: #c00;
+    background: #fff;
+    border: solid 4px #c00;
+    border-radius: 5px;
+    zoom: 1;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    -webkit-text-shadow: 0 0 2px #c00;
+    text-shadow: 0 0 2px #c00;
+    box-shadow: 0 0 2px #c00;
+}
+
+/* tags*/
+
+ul.tags{
+    list-style-type: none;
+    display:inline
+}
+
+ul.tags li{
+    display:inline-block;
+   
+}
+ul.tags li+li{
+    margin:0 5px
+}
+
+
+/*coup de coeur*/
+.tag_1{
+  width:32px;
+  font-size:20px;
+  height: auto;
+line-height: 20px;
+vertical-align: top;
+background-image: none;
+background-position: 0% 0%;
+background-repeat: repeat;
+margin-top: 0;
+font-family: FontAwesome;
+font-weight: normal;
+font-style: normal;
+text-decoration: inherit;
+-webkit-font-smoothing: antialiased;
+color:#cc0000
+}
+.tag_1 span{
+    display:none
+}
+.tag_1:before{
+    content: "\f004";
+
+}
+
+/*mp2013*/
+.tag_2{
+   /* display:inline-block;*/
+  
+    text-indent:-9000px;
+    width:20px;
+    height:20px;
+    background: url('../img/logo_mp2013_20x20.png') no-repeat ;
+    
+
+}

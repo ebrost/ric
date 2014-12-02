@@ -1,0 +1,390 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 janv. 2014, 10:07:15
+    Author     : manu
+*/
+
+/*user login*/
+	#UserLoginForm{
+	
+
+	/*augmentation margin a cause des icons sur input*/
+	margin:10px;
+	
+	}
+	
+	#UserLoginForm .input-group{
+            
+	margin-bottom:0.5em
+	}
+        
+        #UserLoginForm .help-inline{
+            display:inline-block;
+            margin:0 0.5em
+        }
+ /*admin menu*/       
+        #admin_menu li.panel{
+            padding:0
+            
+        }
+       
+    #admin_menu li.panel+.panel {
+        margin-top:-1px
+    }
+ 
+    
+    #addresspicker_container.well{
+       border-right: 0;
+        z-index: 100;
+        position: relative;
+        border-radius: 0;
+        border-right-width: 0px;
+        box-shadow:none;
+        -webkit-box-shadow:none;
+        overflow:hidden;
+        padding-right:0;
+        padding-left:0
+    }
+    #map_container.well, .map_container .well{
+        margin:0 0 0 -16px;
+        border-radius:0 4px 4px 4px ;
+        box-shadow:none;
+        -webkit-box-shadow:none;
+    }
+    #map_container #legend, .map_container #legend{
+        white-space: nowrap;
+        width: 100%;
+        display: inline-block;
+        margin: 10px 0 0 0;
+    }
+   #map_container .map, .map_container .map{height:300px;
+    width:100%;
+    margin-bottom:20px
+    }
+    
+    .error-message{
+        color: #cc0000;
+        font-style: italic;
+    }
+        input[required="required"]:after, .required:after {
+        content:none
+        }
+    
+        .input.required:before,.input.required:before{
+  content: " *"; 
+color: #b94a48;
+position:absolute;
+left:-5px;
+top:0
+}
+
+.droparea{
+    display: block;
+    border: 4px dashed #DDD;
+    height: 200px;
+    text-align: center;
+}
+.droparea.dropping{
+    border-color: #83b4d8;
+}
+.droparea p{
+    color: #AAA;
+    font-size: 20px;
+    padding: 60px 0 0 0!important;
+    margin: 0;
+    font-weight: bold;
+}
+.droparea p.small{
+    font-size: 12px;
+    padding:10px 0 0 0!important;
+    font-weight: normal;
+}
+
+.filelist{
+    margin-top:10px;
+  
+}
+.filelist .visu img{
+    margin: 0 10px;
+    height: 30px;
+    vertical-align: middle;
+}
+.file, .panel-heading{
+  /*  border:solid 1px #dfdfdf;
+    background-color: #FFF;
+    border-top-style: none;
+    overflow: hidden;
+
+    padding:10px;
+    margin:10px 0;
+ min-height:80px;
+  */
+ 
+  
+    position: relative;
+}
+.file .thumb{ 
+    border:1px solid #eeeeee;
+    background-color: #eeeeee;
+    vertical-align:top;
+    display:block;
+    float: left;
+        margin-right:10px;
+        height:70px
+            
+}
+
+.filelist .file .name, .filelist .file .copyright{
+    vertical-align:top;
+} 
+.filelist .file .actions {
+    position:absolute;
+    top:0;
+    right:15px;
+    line-height: 80px     
+
+}
+.panel .file .actions {
+float:right
+   
+
+}
+
+
+.filelist .progress{
+    position: absolute;
+top: 0;
+right: 5px;
+width: 250px;
+}
+.filelist .progress .progress-bar{
+    width:5%
+
+}
+
+.file .ext-content iframe{
+    display:block;
+    margin:0 auto;
+}
+.file .ext-content div{
+    text-align:center;
+    margin:0 auto;
+}
+
+ .selected .file.Image:first-child .panel-heading{background:#dff0d8}
+ .placeholder {border:4px dashed #DDD;height:100px;margin:10px 0 15px 0}
+ 
+#admin_menu .panel-body ul li{
+     display: block;
+    position: relative;
+    padding: 3px 0;
+    margin:0;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 14px;
+    padding-top: 5px;
+ }
+ 
+ #admin_menu .panel-body ul li:hover{
+     background-color: #f5f5f5;
+ }
+ #admin_menu .panel-body ul.editable-items > li+li{   
+  border-top: 1px dashed #A8A8A8;       
+ }
+ 
+ #admin_menu .panel-body button.remove{
+   display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;   
+ }
+ #admin_menu .panel-body i.fa-clock-o{
+     margin-left:-1.2857142857142858em
+     
+ }
+div.checkbox.level_1{
+clear: both;
+width:100%;
+margin-top:1em;
+font-weight:bold
+}
+div.checkbox.level_1 + div.checkbox.level_1{
+    margin-top:inherit
+}
+div.checkbox.level_1 label{
+
+font-weight:bold
+}
+
+#rootwizard .input-group{
+    margin-bottom: 0.5em;
+}
+
+ /******************bootstrap dialog *///////////////////
+ 
+ 
+ .bootstrap-dialog {
+
+}
+.bootstrap-dialog .modal-header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.bootstrap-dialog .bootstrap-dialog-title {
+    color: #fff;
+    display: inline-block;
+}
+.bootstrap-dialog.type-default .bootstrap-dialog-title {
+    color: #333;
+}
+.bootstrap-dialog.size-normal .bootstrap-dialog-title {
+    font-size: 16px;
+}
+.bootstrap-dialog.size-large .bootstrap-dialog-title {
+    font-size: 24px;
+}
+.bootstrap-dialog .bootstrap-dialog-close-button {
+    float: right;
+    filter:alpha(opacity=90);
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+.bootstrap-dialog.size-normal .bootstrap-dialog-close-button {
+    font-size: 20px;
+}
+.bootstrap-dialog.size-large .bootstrap-dialog-close-button {
+    font-size: 30px;
+}
+.bootstrap-dialog .bootstrap-dialog-close-button:hover {
+    cursor: pointer;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+.bootstrap-dialog.size-normal .bootstrap-dialog-message {
+    font-size: 14px;
+}
+.bootstrap-dialog.size-large .bootstrap-dialog-message {
+    font-size: 18px;
+}
+.bootstrap-dialog.type-default .modal-header {
+    background-color: #fff;
+}
+.bootstrap-dialog.type-info .modal-header {
+    background-color: #5bc0de;
+}
+.bootstrap-dialog.type-primary .modal-header {
+    background-color: #428bca;
+}
+.bootstrap-dialog.type-success .modal-header {
+    background-color: #5cb85c;
+}
+.bootstrap-dialog.type-warning .modal-header {
+    background-color: #f0ad4e;
+}
+.bootstrap-dialog.type-danger .modal-header {
+    background-color: #d9534f;
+}
+.bootstrap-dialog .bootstrap-dialog-button-icon {
+    margin-right: 3px;
+}
+.help-inline{color:red}
+/**
+ * Icon animation
+ * Copied from font-awesome: http://fontawesome.io/
+ **/
+.icon-spin {
+    display: inline-block;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+    0% {
+    -moz-transform: rotate(0deg);
+}
+100% {
+    -moz-transform: rotate(359deg);
+}
+}
+@-webkit-keyframes spin {
+    0% {
+    -webkit-transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(359deg);
+}
+}
+@-o-keyframes spin {
+    0% {
+    -o-transform: rotate(0deg);
+}
+100% {
+    -o-transform: rotate(359deg);
+}
+}
+@-ms-keyframes spin {
+    0% {
+    -ms-transform: rotate(0deg);
+}
+100% {
+    -ms-transform: rotate(359deg);
+}
+}
+@keyframes spin {
+    0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(359deg);
+}
+}
+/** End of icon animation **/
+
+#nom_ficheactivite>div{
+    padding: 5px;
+}
+#nom_ficheactivite>div>h4{
+    margin:0
+}
+
+.sessionBtns p{
+    margin-right:1em
+}
+
+#sessionsList .session{
+    margin-left:15px
+}
+/*
+ .tab-content>.tab-pane {
+			position: absolute !important;
+			left: -10000px !important;
+			display:block !important;
+			overflow:none;
+		}
+                
+.tab-content>.active {
+			position: inherit !important;
+			//left: -10000px !important;
+			display:block !important;
+			//overflow:none;
+		}
+
+*/
+#ext_medias .ext-content{overflow: hidden}
+
+.ui-sortable .file{
+    cursor:move
+}

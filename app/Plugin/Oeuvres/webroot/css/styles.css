@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 nov. 2013, 11:02:26
+    Author     : e.brost
+*/
+div.checkbox.level_1{
+clear: both;
+width:100%;
+margin-top:1em;
+font-weight:bold
+}
+div.checkbox.level_1 + div.checkbox.level_1{
+    margin-top:inherit
+}
+div.checkbox.level_1 label{
+
+font-weight:bold
+}
+
+

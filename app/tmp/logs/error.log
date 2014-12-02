@@ -1,0 +1,683 @@
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsCommune" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsCommune" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTypepublic" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTypepublic" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTag" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTag" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:25 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:27 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:27 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:27 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:27 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:31 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:31 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsCommune" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsCommune" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTypepublic" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTypepublic" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTag" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTag" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 413
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsCommune" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsCommune" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTypepublic" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTypepublic" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTag" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsTag" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:32 Warning: Warning (512): Model "Evenement" is not associated with model "EvenementsGenre" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::prevAndNext() - APP\Plugin\Agenda\Model\Evenement.php, line 422
+EvenementsController::viewNav() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 224
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:33 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:34 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:34 Warning: Warning (2): strcasecmp() expects parameter 1 to be string, array given in [C:\wamp\www\ric3.0.2-4\lib\Cake\Routing\Router.php, line 608]
+Trace:
+strcasecmp - [internal], line ??
+Router::_parseExtension() - CORE\Cake\Routing\Router.php, line 608
+Router::parse() - CORE\Cake\Routing\Router.php, line 566
+Dispatcher::parseParams() - CORE\Cake\Routing\Dispatcher.php, line 215
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 142
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:34 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
+2014-12-02 13:50:34 Warning: Warning (512): Model "Evenement" is not associated with model "Evenement" in [C:\wamp\www\ric3.0.2-4\lib\Cake\Model\Behavior\ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE\Cake\Model\Behavior\ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE\Cake\Utility\ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 248
+Model::buildQuery() - CORE\Cake\Model\Model.php, line 2799
+Model::find() - CORE\Cake\Model\Model.php, line 2717
+Evenement::_findById() - APP\Plugin\Agenda\Model\Evenement.php, line 325
+EvenementsController::view() - APP\Plugin\Agenda\Controller\EvenementsController.php, line 200
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 110
+
