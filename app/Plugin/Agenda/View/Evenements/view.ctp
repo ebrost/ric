@@ -283,7 +283,7 @@ foreach($evenement['Session'] as $keySession=> $session){
                              <?php if (CakePlugin::loaded('Annuaire')) : ?>
                             <div id="annuaire" class="tab-pane fade">
                                 <?php if (!empty($evenement['Ficheactivite'])): ?>
-                                <?php echo $this->element('Annuaire.embededView',array('ficheactivite'=>$evenement['Ficheactivite'])); ?>
+                                <?php echo $this->element('Annuaire.embededView',array('ficheactivite'=>$evenement['Ficheactivite'],'displayLink'=>'true')); ?>
                                 <?php endif; ?>
                             </div>
                                 <?php endif; ?>
@@ -297,4 +297,3 @@ foreach($evenement['Session'] as $keySession=> $session){
 
     </div>
    
-<script type="text/javascript" src="http://cibul.net/js/review/cibulEmbed.min.js"></script><iframe src="http://cibul.net/embed/event/32134691" class="cbevdtl" style="width:100%;" frameborder="0"></iframe>
