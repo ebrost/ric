@@ -14,8 +14,6 @@ class EvenementsController extends AgendaAppController {
 
     public $uses = array('Agenda.Evenement', 'Agenda.AgendaGenre','Implantation');
     public $helpers = array('Text');
-    // public $actsAs = array('Containable');
-   // public $helpers = array('Cache', 'Html', 'Form', 'Tools.GoogleMapV3', 'RicImage');
     public $cacheAction = array('view' => 36000);
 
     public function index() {
@@ -169,8 +167,8 @@ class EvenementsController extends AgendaAppController {
                     $searchData['Search']['endDate'] = $today->add(new DateInterval('P' . $this->Evenement->getRssDateOffset() . 'D'))->format('d-m-Y');
                     $searchConditions = $this->Evenement->_getConditions($searchData, false);
                     $searchConditions['order'] = (!empty($searchConditions['order'])) ? array_merge($searchConditions['order'],array('Evenement.premieredatesession'=>'asc','Evenement.id' => 'asc')): array('Evenement.premieredatesession'=>'asc','Evenement.id' => 'asc');
-                    $evt_fields=('Evenement.nom_complet,Evenement.genres,Evenement.commentaires,Evenement.parent_id,Evenement.type_id,Evenement.master,Evenement.annule,Type.*');
-                    $fields = (!empty($searchConditions['additionalsFields'])) ? array_merge(array($evt_fields), $searchConditions['additionalsFields']) : $evt_fields;
+                    $evt_fields=('Evenement.nom_complet,Evenement.commentaires,Evenement.url_site_web,Evenement.genres,Evenement.parent_id,Evenement.type_id,Evenement.master,Evenement.annule,Type.*');
+              $fields = (!empty($searchConditions['additionalsFields'])) ? array_merge(array($evt_fields), $searchConditions['additionalsFields']) : $evt_fields;
                     $evenements=$this->Evenement->find('all',array(
                             'fields' => $fields,
                 
@@ -178,7 +176,7 @@ class EvenementsController extends AgendaAppController {
                             'order' => $searchConditions['order'] ,
                             'conditions' => $searchConditions['conditions'],
                             'group' => 'Evenement.id',
-                            'contain'=>array('Session','EvenementsTypepublic','Typepublic','Type','EvenementsTag','Tag','EvenementsGenreGenre','AgendaGenre','Image')
+                             'contain'=>array('Session','EvenementsCommune','EvenementsTypepublic','Typepublic','Type','EvenementsTag','Tag','EvenementsGenre','AgendaGenre','Image')
                
                 ));
            
