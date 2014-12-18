@@ -4,9 +4,12 @@
     <?php foreach ($evenement['Session'] as $sess) : ?>
         <?php if ($sess['date_fin'] >= date('Y-m-d')) : ?>
             <?php if ($counter < $maxSessionsByEventOnList || $maxSessionsByEventOnList == -1) : ?>
+            <?php if (!empty($displayDescriptif) && $displayDescriptif===true): ?>
              <?php if (!empty($sess['descriptif'])): ?>
                             <p><?php echo nl2br($sess['descriptif']); ?> </p>
                         <?php endif; ?>
+                
+            <?php endif; ?> 
                 <p>
                     <i class="fa fa-calendar"></i>  <?php echo $sess['resume_session']; ?> <br />
                     <?php if (!empty($displayAdresse) && $displayAdresse===true): ?>

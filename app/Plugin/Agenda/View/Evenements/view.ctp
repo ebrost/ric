@@ -199,7 +199,7 @@ foreach($evenement['Session'] as $keySession=> $session){
 
 
                                                     <div class="well">
-                             <?php echo $this->element('sessionResume', array('evenement' => $evenement,'displayLink'=>false,'maxSessionsByEventOnList' => -1,'displayAdresse'=>true)); ?>
+                             <?php echo $this->element('sessionResume', array('evenement' => $evenement,'displayLink'=>false,'maxSessionsByEventOnList' => -1,'displayAdresse'=>true,'displayDescriptif'=>true)); ?>
                                       </div>
                         <?php endif; ?>
                         <?php debug($evenement);?>

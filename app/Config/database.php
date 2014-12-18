@@ -7,7 +7,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'baseric',
+		'database' => 'crlbn',
                 'prefix' =>'ric_',
 		'encoding' => 'utf8'
 	);

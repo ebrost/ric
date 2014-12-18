@@ -9,4 +9,4 @@
 <?php $this->end();?>
 
 <?php echo $this->fetch('content');?>
-<?php echo $this->Html->css('Agenda.styles');?>
+<?php echo $this->Html->css('Agenda.styles', array('block' => 'css')); ?>

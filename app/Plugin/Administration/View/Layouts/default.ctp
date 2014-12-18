@@ -13,4 +13,4 @@
 <?php $this->end();?>
 
 <?php echo $this->fetch('content');?>
-<?php echo $this->Html->css('Administration.styles');
+<?php echo $this->Html->css('Administration.styles', array('block' => 'css')); ?>

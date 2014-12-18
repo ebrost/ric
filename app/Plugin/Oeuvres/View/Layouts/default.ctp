@@ -9,4 +9,4 @@
 <?php $this->end();?>
 
 <?php echo $this->fetch('content');?>
-<?php echo $this->Html->css('Oeuvres.styles');?>
+<?php echo $this->Html->css('Oeuvres.styles', array('block' => 'css')); ?>

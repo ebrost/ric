@@ -1,5 +1,5 @@
 <?php
-class Tag extends AgendaAppModel
+class Tag extends AnnuaireAppModel
 {
     public $name='Tag';
     public $actsAs = array('Containable');

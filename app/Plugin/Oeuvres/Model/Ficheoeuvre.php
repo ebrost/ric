@@ -8,7 +8,10 @@ class Ficheoeuvre extends OeuvresAppModel {
         'all' => true, 'first' => true, 'count' => true,
         'neighbors' => true, 'list' => true, 'threaded' => true, 'byCriteria' => true);
     public $hasAndBelongsToMany = array(
-        
+         'Tag' => array(
+            'className' => 'Oeuvres.Tag',
+            'joinTable' => 'oeuvres_ficheoeuvres_tags'
+        ),
        'Typepublic' => array(
           'className' => 'Oeuvres.Typepublic',
           'joinTable' => 'oeuvres_ficheoeuvres_typepublics',

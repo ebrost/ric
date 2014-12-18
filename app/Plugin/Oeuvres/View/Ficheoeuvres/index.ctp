@@ -1,6 +1,6 @@
 <?php
 $this->extend('/Common/viewWithMenu');
-$this->Html->css('Oeuvres.styles', null, array('inline' => false));
+$this->Html->css('Oeuvres.styles', array('block' => 'css')); ?>
 $this->start('content-top');
 echo $this->element('searchForm');
 $this->end();

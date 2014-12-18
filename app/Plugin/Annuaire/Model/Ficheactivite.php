@@ -22,6 +22,10 @@ class Ficheactivite extends AnnuaireAppModel {
    );
 
      public $hasAndBelongsToMany =array(
+        'Tag' => array(
+            'className' => 'Agenda.Tag',
+            'joinTable' => 'annuairea_ficheactivites_tags'
+        ),
       'Genre' => array(
             'className' => 'Annuaire.Genre',
             'with' => 'Annuaire.ficheactivites_genres'
@@ -61,31 +65,7 @@ class Ficheactivite extends AnnuaireAppModel {
         
          
      ) 
-    /* 'FicheactiviteImage'=>array(
-            'className'=>'Annuaire.FicheactiviteImage',
-            'foreignKey'=>'foreign_key',
-            'associationForeignKey'=>'media_id',
-         'conditions'=>array('FicheactiviteImage.category'=>'Image'),
-            'order' => 'FicheactiviteImage.order ASC',
-            
-        ),
-       'FicheactiviteDocument'=>array(
-            'className'=>'Annuaire.FicheactiviteDocument',
-             'foreignKey'=>'foreign_key',
-            'associationForeignKey'=>'media_id',
-            'conditions'=>array('FicheactiviteDocument.category'=>'Document'),
-            'order' => 'FicheactiviteDocument.order ASC',
-            
-        ),
-       'FicheactiviteExternalMedia'=>array(
-            'className'=>'Annuaire.FicheactiviteExternalMedia',
-             'foreignKey'=>'foreign_key',
-            'associationForeignKey'=>'media_id',
-            'conditions'=>array('FicheactiviteExternalMedia.category'=>'ExternalMedia'),
-            'order' => 'FicheactiviteExternalMedia.order ASC',
-           
-        ),
-     */ 
+    
    );
   // public $belongsTo=array('User'=>array('className'=>'Administration.AdministrationUser'));
      public function __construct($id = false, $table = null, $ds = null) {

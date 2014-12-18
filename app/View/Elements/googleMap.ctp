@@ -12,11 +12,11 @@ display:none;z-index:102;text-align:center;width:100%;position:absolute;backgrou
 <?php 
 $model=Inflector::classify( $this->params['controller']);
 
-echo $this->Html->script($this->GoogleMapV3->apiUrl());
+echo $this->Html->script($this->RicGoogleMapV3->apiUrl());
 echo $this->Html->script('oms.min');
 $height=isset($height)? $height:'400px';
 
-echo $this->GoogleMapV3->map(array('div'=>array('height'=>$height, 'width'=>'100%')));
+echo $this->RicGoogleMapV3->map(array('div'=>array('height'=>$height, 'width'=>'100%')));
 if (isset($items[0])){
     
 	foreach ($items as $item){
@@ -25,7 +25,7 @@ if (isset($items[0])){
 
         
         
-		$this->GoogleMapV3->addMarker(
+		$this->RicGoogleMapV3->addMarker(
 			array(
 				'lat' => $item[$model]['latitude'],
 				'lng' => $item[$model]['longitude'],
@@ -65,7 +65,7 @@ if (isset($items[0])){
 }
 else{
 		$thumbnail=(isset($item[$model]['Image'][0]))? '<div class="pull-left inline" style="margin-right:5px">'.$this->RicImage->image($item[$model]['Image'][0],'icon').'</div>':'';	
-        $this->GoogleMapV3->addMarker(
+        $this->RicGoogleMapV3->addMarker(
 			array(
 				'lat' => $items[$model]['latitude'],
 				'lng' => $items[$model]['longitude'],
@@ -87,7 +87,7 @@ else{
 
 }
 
- echo $this->Html->scriptBlock($this->GoogleMapV3->script(),array('block'=>'script'));
+ echo $this->Html->scriptBlock($this->RicGoogleMapV3->script(),array('block'=>'script'));
 ?>
 </div>
 </div>

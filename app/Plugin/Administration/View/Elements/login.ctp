@@ -1,6 +1,6 @@
 <!-- prototype menu droite -->
 <?php echo $this->Html->script('Administration.loginActions', array('block' => 'script')); ?>
-<?php echo $this->Html->css('Administration.styles');?>
+<?php echo $this->Html->css('Administration.styles', array('block' => 'css')); ?>
 <!--nocache-->
 
 <ul class="nav-sidebar well  nav-list">

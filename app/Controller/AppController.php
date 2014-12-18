@@ -34,7 +34,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
     public $uses = array('AppModel');
-    public $helpers =array('Session','Cache', 'Html', 'Form', 'Tools.GoogleMapV3','RicImage');
+    public $helpers =array('Session','Cache', 'Html', 'Form', 'RicGoogleMapV3','RicImage');
     public $components = array('DebugKit.Toolbar', 'RequestHandler', 'Session',
          
     'Auth'=>array('authenticate' => array(

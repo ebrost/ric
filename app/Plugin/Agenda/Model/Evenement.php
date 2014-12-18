@@ -129,6 +129,11 @@ class Evenement extends AgendaAppModel {
         if ( !empty($dataArray['Search']['prioritaire']) && $dataArray['Search']['prioritaire']===true) {
             $searchConditions['conditions']['Evenement.prioritaire'] = 1;
         }
+        
+         // recherche sur type
+        if (!empty($dataArray['Search']['type'])) {
+            $searchConditions['conditions']['Evenement.type_id'] = $dataArray['Search']['type'] ;
+        }
 
         //recherche sur genre
         if (!empty($dataArray['Search']['genre'])) {
@@ -156,6 +161,8 @@ class Evenement extends AgendaAppModel {
             }
             $searchConditions['conditions'][] = "(" . $condition . ")";
         }
+        
+         
         
         
         //typepublic
